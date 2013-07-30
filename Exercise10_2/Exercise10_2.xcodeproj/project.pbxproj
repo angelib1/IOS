@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B883FC417A76B1E0042E2E1 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B883FC317A76B1E0042E2E1 /* sound.mp3 */; };
 		50DE52881765AB6400FF3440 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DE52871765AB6400FF3440 /* UIKit.framework */; };
 		50DE528A1765AB6400FF3440 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DE52891765AB6400FF3440 /* Foundation.framework */; };
 		50DE528C1765AB6400FF3440 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DE528B1765AB6400FF3440 /* CoreGraphics.framework */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B883FC317A76B1E0042E2E1 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sound.mp3; path = ../sound.mp3; sourceTree = "<group>"; };
 		50DE52841765AB6400FF3440 /* Exercise10_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise10_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50DE52871765AB6400FF3440 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		50DE52891765AB6400FF3440 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -120,6 +122,7 @@
 		50DE528E1765AB6400FF3440 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4B883FC317A76B1E0042E2E1 /* sound.mp3 */,
 				50DE52B31765B4E200FF3440 /* image3.png */,
 				50DE52B41765B4E200FF3440 /* p1.png */,
 				50DE52B51765B4E200FF3440 /* p2.png */,
@@ -202,6 +205,7 @@
 				50DE52BE1765B4E300FF3440 /* p4.png in Resources */,
 				50DE52BF1765B4E300FF3440 /* p5.png in Resources */,
 				50DE52C01765B4E300FF3440 /* p6.png in Resources */,
+				4B883FC417A76B1E0042E2E1 /* sound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

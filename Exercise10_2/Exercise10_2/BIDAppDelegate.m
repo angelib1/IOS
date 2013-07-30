@@ -50,11 +50,32 @@
         bgTask = UIBackgroundTaskInvalid;
         
     }];
+    
+    
     UILocalNotification *localfi=[[UILocalNotification alloc]init];
-    localfi.fireDate=[NSDate date];
+    
+    //Hien thi Notification sau 1 phut vao Background
+    //    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit fromDate:[NSDate date]];
+    //    NSInteger day=[components day];
+    //    NSInteger month=[components month];
+    //    NSInteger year=[components year];
+    //    NSInteger currentHour = [components hour];
+    //    NSInteger currentMinute = [components minute]+1;
+    //    NSInteger currentSecond = [components second];
+    //    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    //    [dateFormat setDateFormat:@"dd/MM/yyyy hh:mm:ss aa"];
+
+    //NSString *dateNotifi=[NSString stringWithFormat:@"%d/%d/%d %d:%d:%d AM",day,month,year,currentHour,currentMinute,currentSecond];
+     //NSDate *dateOne=[dateFormat dateFromString:dateNotifi];
+    //localfi.fireDate=dateOne;
+   
+    
+    //Hien thi sau 1 khoang thoi gian sau khi vao BackGround
+    NSTimeInterval timeInterval=10;
+    localfi.fireDate=[[NSDate date] dateByAddingTimeInterval:timeInterval];
     localfi.alertBody=@"This is a Notification";
     localfi.alertAction=@"Notification";
-    localfi.soundName=UILocalNotificationDefaultSoundName;
+    localfi.soundName=@"sound.mp3";
     [[UIApplication sharedApplication] scheduleLocalNotification:localfi];
     
     
