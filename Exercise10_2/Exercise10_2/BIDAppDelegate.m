@@ -18,7 +18,15 @@
     // Override point for customization after application launch.
     self.viewController = [[BIDViewController alloc] initWithNibName:@"BIDViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
+    UILocalNotification *localNoti=[launchOptions objectForKey:UIApplicationLaunchOptionsAnnotationKey];
+    if(localNoti){
+        //thong bao
+    }
+    else{
+        [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    }
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -32,6 +40,24 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    __block UIBackgroundTaskIdentifier bgTask;
+    bgTask = [application beginBackgroundTaskWithExpirationHandler:^{
+        
+       
+        
+        [application endBackgroundTask:bgTask];
+        
+        bgTask = UIBackgroundTaskInvalid;
+        
+    }];
+    UILocalNotification *localfi=[[UILocalNotification alloc]init];
+    localfi.fireDate=[NSDate date];
+    localfi.alertBody=@"This is a Notification";
+    localfi.alertAction=@"Notification";
+    localfi.soundName=UILocalNotificationDefaultSoundName;
+    [[UIApplication sharedApplication] scheduleLocalNotification:localfi];
+    
+    
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application

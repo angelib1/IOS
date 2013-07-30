@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B83C13817968A81005E1E6F /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B83C13717968A81005E1E6F /* GoogleMaps.framework */; };
+		4B83C13A17968A96005E1E6F /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4B83C13917968A96005E1E6F /* GoogleMaps.bundle */; };
+		4B87572B178BF9C1000FD76D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B87572A178BF9C1000FD76D /* UIKit.framework */; };
+		4B87572D178BF9C1000FD76D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B87572C178BF9C1000FD76D /* Foundation.framework */; };
+		4B87572F178BF9C1000FD76D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B87572E178BF9C1000FD76D /* CoreGraphics.framework */; };
+		4B875735178BF9C1000FD76D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B875733178BF9C1000FD76D /* InfoPlist.strings */; };
+		4B875737178BF9C1000FD76D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B875736178BF9C1000FD76D /* main.m */; };
+		4B87573B178BF9C1000FD76D /* BIDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B87573A178BF9C1000FD76D /* BIDAppDelegate.m */; };
+		4B87573D178BF9C1000FD76D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B87573C178BF9C1000FD76D /* Default.png */; };
+		4B87573F178BF9C1000FD76D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B87573E178BF9C1000FD76D /* Default@2x.png */; };
+		4B875741178BF9C1000FD76D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B875740178BF9C1000FD76D /* Default-568h@2x.png */; };
+		4B875744178BF9C1000FD76D /* BIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B875743178BF9C1000FD76D /* BIDViewController.m */; };
+		4B875747178BF9C2000FD76D /* BIDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B875745178BF9C2000FD76D /* BIDViewController.xib */; };
+		4B875752178BFACE000FD76D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B875751178BFACE000FD76D /* AVFoundation.framework */; };
+		4B875754178BFAD7000FD76D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B875753178BFAD7000FD76D /* CoreData.framework */; };
+		4B875756178BFAEA000FD76D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B875755178BFAEA000FD76D /* CoreText.framework */; };
+		4B875758178BFAF7000FD76D /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B875757178BFAF7000FD76D /* GLKit.framework */; };
+		4B87575A178BFAFE000FD76D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B875759178BFAFE000FD76D /* ImageIO.framework */; };
+		4B87575C178BFB08000FD76D /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B87575B178BFB08000FD76D /* libc++.dylib */; };
+		4B87575E178BFB14000FD76D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B87575D178BFB14000FD76D /* libicucore.dylib */; };
+		4B875760178BFB1E000FD76D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B87575F178BFB1E000FD76D /* libz.dylib */; };
+		4B875762178BFB27000FD76D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B875761178BFB27000FD76D /* OpenGLES.framework */; };
+		4B875764178BFB33000FD76D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B875763178BFB33000FD76D /* QuartzCore.framework */; };
+		4B875766178BFB3E000FD76D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B875765178BFB3E000FD76D /* SystemConfiguration.framework */; };
+		4B875768178BFB7E000FD76D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B875767178BFB7E000FD76D /* CoreLocation.framework */; };
+		4B87576E178C0971000FD76D /* BIDDragableMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B87576D178C0971000FD76D /* BIDDragableMarker.m */; };
+		4BBF06B7178EA2BB003737EB /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB300AF178E90D300855A1C /* SBJsonParser.m */; };
+		4BBF06B8178EA2C2003737EB /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB300B3178E90D300855A1C /* SBJsonStreamParserAccumulator.m */; };
+		4BBF06B9178EA2C8003737EB /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB300B5178E90D300855A1C /* SBJsonStreamParserAdapter.m */; };
+		4BBF06BA178EA2D4003737EB /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB300B1178E90D300855A1C /* SBJsonStreamParser.m */; };
+		4BBF06BB178EA2D9003737EB /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB300B7178E90D300855A1C /* SBJsonStreamParserState.m */; };
+		4BBF06BC178EA2DE003737EB /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB300BD178E90D300855A1C /* SBJsonStreamWriterAccumulator.m */; };
+		4BBF06BD178EA2E1003737EB /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB300BF178E90D300855A1C /* SBJsonStreamWriterState.m */; };
+		4BBF06BE178EA2E7003737EB /* SBJsonStreamTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB300B9178E90D300855A1C /* SBJsonStreamTokeniser.m */; };
+		4BBF06BF178EA2EC003737EB /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB300BB178E90D300855A1C /* SBJsonStreamWriter.m */; };
+		4BBF06C0178EA2F4003737EB /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB300C1178E90D300855A1C /* SBJsonWriter.m */; };
+		4BC4C4A7179FBA27004F1EF5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC4C4A6179FBA27004F1EF5 /* libsqlite3.dylib */; };
+		4BC4C4A9179FBA4F004F1EF5 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC4C4A8179FBA4F004F1EF5 /* libsqlite3.0.dylib */; };
+		4BC4C4AB179FBA7B004F1EF5 /* mapDataBase.sql in Resources */ = {isa = PBXBuildFile; fileRef = 4BC4C4AA179FBA7B004F1EF5 /* mapDataBase.sql */; };
+		4BC4C4AD179FC40D004F1EF5 /* mapData.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4BC4C4AC179FC40D004F1EF5 /* mapData.rtf */; };
+		4BC4C4B1179FD4E4004F1EF5 /* dataMap.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4BC4C4B0179FD4E4004F1EF5 /* dataMap.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4B83C13717968A81005E1E6F /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		4B83C13917968A96005E1E6F /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		4B875727178BF9C1000FD76D /* MapIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B87572A178BF9C1000FD76D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4B87572C178BF9C1000FD76D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4B87572E178BF9C1000FD76D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4B875732178BF9C1000FD76D /* MapIOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MapIOS-Info.plist"; sourceTree = "<group>"; };
+		4B875734178BF9C1000FD76D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4B875736178BF9C1000FD76D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4B875738178BF9C1000FD76D /* MapIOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MapIOS-Prefix.pch"; sourceTree = "<group>"; };
+		4B875739178BF9C1000FD76D /* BIDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDAppDelegate.h; sourceTree = "<group>"; };
+		4B87573A178BF9C1000FD76D /* BIDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDAppDelegate.m; sourceTree = "<group>"; };
+		4B87573C178BF9C1000FD76D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4B87573E178BF9C1000FD76D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		4B875740178BF9C1000FD76D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4B875742178BF9C1000FD76D /* BIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDViewController.h; sourceTree = "<group>"; };
+		4B875743178BF9C1000FD76D /* BIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDViewController.m; sourceTree = "<group>"; };
+		4B875746178BF9C2000FD76D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BIDViewController.xib; sourceTree = "<group>"; };
+		4B875751178BFACE000FD76D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4B875753178BFAD7000FD76D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4B875755178BFAEA000FD76D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		4B875757178BFAF7000FD76D /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		4B875759178BFAFE000FD76D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		4B87575B178BFB08000FD76D /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		4B87575D178BFB14000FD76D /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		4B87575F178BFB1E000FD76D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		4B875761178BFB27000FD76D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		4B875763178BFB33000FD76D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4B875765178BFB3E000FD76D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4B875767178BFB7E000FD76D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4B87576C178C0971000FD76D /* BIDDragableMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDDragableMarker.h; sourceTree = "<group>"; };
+		4B87576D178C0971000FD76D /* BIDDragableMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDDragableMarker.m; sourceTree = "<group>"; };
+		4B87576F178C0999000FD76D /* BIDDraggableMarkerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDDraggableMarkerDelegate.h; sourceTree = "<group>"; };
+		4BB300AD178E90D300855A1C /* SBJson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
+		4BB300AE178E90D300855A1C /* SBJsonParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		4BB300AF178E90D300855A1C /* SBJsonParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		4BB300B0178E90D300855A1C /* SBJsonStreamParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
+		4BB300B1178E90D300855A1C /* SBJsonStreamParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParser.m; sourceTree = "<group>"; };
+		4BB300B2178E90D300855A1C /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
+		4BB300B3178E90D300855A1C /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAccumulator.m; sourceTree = "<group>"; };
+		4BB300B4178E90D300855A1C /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
+		4BB300B5178E90D300855A1C /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAdapter.m; sourceTree = "<group>"; };
+		4BB300B6178E90D300855A1C /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserState.h; sourceTree = "<group>"; };
+		4BB300B7178E90D300855A1C /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserState.m; sourceTree = "<group>"; };
+		4BB300B8178E90D300855A1C /* SBJsonStreamTokeniser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamTokeniser.h; sourceTree = "<group>"; };
+		4BB300B9178E90D300855A1C /* SBJsonStreamTokeniser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamTokeniser.m; sourceTree = "<group>"; };
+		4BB300BA178E90D300855A1C /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		4BB300BB178E90D300855A1C /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		4BB300BC178E90D300855A1C /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
+		4BB300BD178E90D300855A1C /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
+		4BB300BE178E90D300855A1C /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		4BB300BF178E90D300855A1C /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
+		4BB300C0178E90D300855A1C /* SBJsonWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		4BB300C1178E90D300855A1C /* SBJsonWriter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		4BC4C4A6179FBA27004F1EF5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		4BC4C4A8179FBA4F004F1EF5 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		4BC4C4AA179FBA7B004F1EF5 /* mapDataBase.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = mapDataBase.sql; sourceTree = "<group>"; };
+		4BC4C4AC179FC40D004F1EF5 /* mapData.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = mapData.rtf; sourceTree = "<group>"; };
+		4BC4C4B0179FD4E4004F1EF5 /* dataMap.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dataMap.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B875724178BF9C1000FD76D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BC4C4A9179FBA4F004F1EF5 /* libsqlite3.0.dylib in Frameworks */,
+				4BC4C4A7179FBA27004F1EF5 /* libsqlite3.dylib in Frameworks */,
+				4B875768178BFB7E000FD76D /* CoreLocation.framework in Frameworks */,
+				4B87572B178BF9C1000FD76D /* UIKit.framework in Frameworks */,
+				4B875766178BFB3E000FD76D /* SystemConfiguration.framework in Frameworks */,
+				4B875764178BFB33000FD76D /* QuartzCore.framework in Frameworks */,
+				4B875762178BFB27000FD76D /* OpenGLES.framework in Frameworks */,
+				4B875760178BFB1E000FD76D /* libz.dylib in Frameworks */,
+				4B87575E178BFB14000FD76D /* libicucore.dylib in Frameworks */,
+				4B87575C178BFB08000FD76D /* libc++.dylib in Frameworks */,
+				4B87575A178BFAFE000FD76D /* ImageIO.framework in Frameworks */,
+				4B875758178BFAF7000FD76D /* GLKit.framework in Frameworks */,
+				4B875756178BFAEA000FD76D /* CoreText.framework in Frameworks */,
+				4B87572F178BF9C1000FD76D /* CoreGraphics.framework in Frameworks */,
+				4B875754178BFAD7000FD76D /* CoreData.framework in Frameworks */,
+				4B875752178BFACE000FD76D /* AVFoundation.framework in Frameworks */,
+				4B87572D178BF9C1000FD76D /* Foundation.framework in Frameworks */,
+				4B83C13817968A81005E1E6F /* GoogleMaps.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B87571E178BF9C1000FD76D = {
+			isa = PBXGroup;
+			children = (
+				4B875730178BF9C1000FD76D /* MapIOS */,
+				4B875729178BF9C1000FD76D /* Frameworks */,
+				4B875728178BF9C1000FD76D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4B875728178BF9C1000FD76D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B875727178BF9C1000FD76D /* MapIOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B875729178BF9C1000FD76D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4BC4C4A8179FBA4F004F1EF5 /* libsqlite3.0.dylib */,
+				4BC4C4A6179FBA27004F1EF5 /* libsqlite3.dylib */,
+				4B83C13917968A96005E1E6F /* GoogleMaps.bundle */,
+				4B83C13717968A81005E1E6F /* GoogleMaps.framework */,
+				4B875767178BFB7E000FD76D /* CoreLocation.framework */,
+				4B875765178BFB3E000FD76D /* SystemConfiguration.framework */,
+				4B875763178BFB33000FD76D /* QuartzCore.framework */,
+				4B875761178BFB27000FD76D /* OpenGLES.framework */,
+				4B87575F178BFB1E000FD76D /* libz.dylib */,
+				4B87575D178BFB14000FD76D /* libicucore.dylib */,
+				4B87575B178BFB08000FD76D /* libc++.dylib */,
+				4B875759178BFAFE000FD76D /* ImageIO.framework */,
+				4B875757178BFAF7000FD76D /* GLKit.framework */,
+				4B875755178BFAEA000FD76D /* CoreText.framework */,
+				4B875753178BFAD7000FD76D /* CoreData.framework */,
+				4B875751178BFACE000FD76D /* AVFoundation.framework */,
+				4B87572A178BF9C1000FD76D /* UIKit.framework */,
+				4B87572C178BF9C1000FD76D /* Foundation.framework */,
+				4B87572E178BF9C1000FD76D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B875730178BF9C1000FD76D /* MapIOS */ = {
+			isa = PBXGroup;
+			children = (
+				4BB300AC178E907200855A1C /* JSON */,
+				4B875739178BF9C1000FD76D /* BIDAppDelegate.h */,
+				4B87573A178BF9C1000FD76D /* BIDAppDelegate.m */,
+				4B875742178BF9C1000FD76D /* BIDViewController.h */,
+				4B875743178BF9C1000FD76D /* BIDViewController.m */,
+				4B875745178BF9C2000FD76D /* BIDViewController.xib */,
+				4B875731178BF9C1000FD76D /* Supporting Files */,
+				4B87576C178C0971000FD76D /* BIDDragableMarker.h */,
+				4B87576D178C0971000FD76D /* BIDDragableMarker.m */,
+				4B87576F178C0999000FD76D /* BIDDraggableMarkerDelegate.h */,
+			);
+			path = MapIOS;
+			sourceTree = "<group>";
+		};
+		4B875731178BF9C1000FD76D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4BC4C4AA179FBA7B004F1EF5 /* mapDataBase.sql */,
+				4B875732178BF9C1000FD76D /* MapIOS-Info.plist */,
+				4B875733178BF9C1000FD76D /* InfoPlist.strings */,
+				4B875736178BF9C1000FD76D /* main.m */,
+				4B875738178BF9C1000FD76D /* MapIOS-Prefix.pch */,
+				4B87573C178BF9C1000FD76D /* Default.png */,
+				4B87573E178BF9C1000FD76D /* Default@2x.png */,
+				4B875740178BF9C1000FD76D /* Default-568h@2x.png */,
+				4BC4C4AC179FC40D004F1EF5 /* mapData.rtf */,
+				4BC4C4B0179FD4E4004F1EF5 /* dataMap.txt */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4BB300AC178E907200855A1C /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				4BB300AD178E90D300855A1C /* SBJson.h */,
+				4BB300AE178E90D300855A1C /* SBJsonParser.h */,
+				4BB300AF178E90D300855A1C /* SBJsonParser.m */,
+				4BB300B0178E90D300855A1C /* SBJsonStreamParser.h */,
+				4BB300B1178E90D300855A1C /* SBJsonStreamParser.m */,
+				4BB300B2178E90D300855A1C /* SBJsonStreamParserAccumulator.h */,
+				4BB300B3178E90D300855A1C /* SBJsonStreamParserAccumulator.m */,
+				4BB300B4178E90D300855A1C /* SBJsonStreamParserAdapter.h */,
+				4BB300B5178E90D300855A1C /* SBJsonStreamParserAdapter.m */,
+				4BB300B6178E90D300855A1C /* SBJsonStreamParserState.h */,
+				4BB300B7178E90D300855A1C /* SBJsonStreamParserState.m */,
+				4BB300B8178E90D300855A1C /* SBJsonStreamTokeniser.h */,
+				4BB300B9178E90D300855A1C /* SBJsonStreamTokeniser.m */,
+				4BB300BA178E90D300855A1C /* SBJsonStreamWriter.h */,
+				4BB300BB178E90D300855A1C /* SBJsonStreamWriter.m */,
+				4BB300BC178E90D300855A1C /* SBJsonStreamWriterAccumulator.h */,
+				4BB300BD178E90D300855A1C /* SBJsonStreamWriterAccumulator.m */,
+				4BB300BE178E90D300855A1C /* SBJsonStreamWriterState.h */,
+				4BB300BF178E90D300855A1C /* SBJsonStreamWriterState.m */,
+				4BB300C0178E90D300855A1C /* SBJsonWriter.h */,
+				4BB300C1178E90D300855A1C /* SBJsonWriter.m */,
+			);
+			name = JSON;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B875726178BF9C1000FD76D /* MapIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B87574A178BF9C2000FD76D /* Build configuration list for PBXNativeTarget "MapIOS" */;
+			buildPhases = (
+				4B875723178BF9C1000FD76D /* Sources */,
+				4B875724178BF9C1000FD76D /* Frameworks */,
+				4B875725178BF9C1000FD76D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MapIOS;
+			productName = MapIOS;
+			productReference = 4B875727178BF9C1000FD76D /* MapIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B87571F178BF9C1000FD76D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BID;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Nguyen Thanh Son";
+			};
+			buildConfigurationList = 4B875722178BF9C1000FD76D /* Build configuration list for PBXProject "MapIOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4B87571E178BF9C1000FD76D;
+			productRefGroup = 4B875728178BF9C1000FD76D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B875726178BF9C1000FD76D /* MapIOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B875725178BF9C1000FD76D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B875735178BF9C1000FD76D /* InfoPlist.strings in Resources */,
+				4B87573D178BF9C1000FD76D /* Default.png in Resources */,
+				4B87573F178BF9C1000FD76D /* Default@2x.png in Resources */,
+				4B875741178BF9C1000FD76D /* Default-568h@2x.png in Resources */,
+				4B875747178BF9C2000FD76D /* BIDViewController.xib in Resources */,
+				4B83C13A17968A96005E1E6F /* GoogleMaps.bundle in Resources */,
+				4BC4C4AB179FBA7B004F1EF5 /* mapDataBase.sql in Resources */,
+				4BC4C4AD179FC40D004F1EF5 /* mapData.rtf in Resources */,
+				4BC4C4B1179FD4E4004F1EF5 /* dataMap.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B875723178BF9C1000FD76D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BBF06C0178EA2F4003737EB /* SBJsonWriter.m in Sources */,
+				4BBF06BF178EA2EC003737EB /* SBJsonStreamWriter.m in Sources */,
+				4BBF06BE178EA2E7003737EB /* SBJsonStreamTokeniser.m in Sources */,
+				4BBF06BD178EA2E1003737EB /* SBJsonStreamWriterState.m in Sources */,
+				4BBF06BC178EA2DE003737EB /* SBJsonStreamWriterAccumulator.m in Sources */,
+				4BBF06BB178EA2D9003737EB /* SBJsonStreamParserState.m in Sources */,
+				4BBF06BA178EA2D4003737EB /* SBJsonStreamParser.m in Sources */,
+				4BBF06B9178EA2C8003737EB /* SBJsonStreamParserAdapter.m in Sources */,
+				4BBF06B8178EA2C2003737EB /* SBJsonStreamParserAccumulator.m in Sources */,
+				4BBF06B7178EA2BB003737EB /* SBJsonParser.m in Sources */,
+				4B875737178BF9C1000FD76D /* main.m in Sources */,
+				4B87573B178BF9C1000FD76D /* BIDAppDelegate.m in Sources */,
+				4B875744178BF9C1000FD76D /* BIDViewController.m in Sources */,
+				4B87576E178C0971000FD76D /* BIDDragableMarker.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4B875733178BF9C1000FD76D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B875734178BF9C1000FD76D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4B875745178BF9C2000FD76D /* BIDViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B875746178BF9C2000FD76D /* en */,
+			);
+			name = BIDViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B875748178BF9C2000FD76D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4B875749178BF9C2000FD76D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B87574B178BF9C2000FD76D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = armv7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MapIOS/MapIOS-Prefix.pch";
+				INFOPLIST_FILE = "MapIOS/MapIOS-Info.plist";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4B87574C178BF9C2000FD76D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = armv7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MapIOS/MapIOS-Prefix.pch";
+				INFOPLIST_FILE = "MapIOS/MapIOS-Info.plist";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B875722178BF9C1000FD76D /* Build configuration list for PBXProject "MapIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B875748178BF9C2000FD76D /* Debug */,
+				4B875749178BF9C2000FD76D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B87574A178BF9C2000FD76D /* Build configuration list for PBXNativeTarget "MapIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B87574B178BF9C2000FD76D /* Debug */,
+				4B87574C178BF9C2000FD76D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B87571F178BF9C1000FD76D /* Project object */;
+}

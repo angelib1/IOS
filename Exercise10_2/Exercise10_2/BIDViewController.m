@@ -35,7 +35,16 @@ BIDProgressLoading *progress;
     
     [self.view addSubview:imageBackground];
     [self.view addSubview:button];
+    
+    //check device co ho tro MultiTasking hay khong
+    UIDevice *device=[UIDevice currentDevice];
+    BOOL deviceMultiTasking=NO;
+    if([device isMultitaskingSupported]){
+        deviceMultiTasking=YES;
+    }
+    
 }
+
 -(IBAction)btnClick:(id)sender{
     [imageload loadImage:sender];
     [self.view addSubview:imageload.imageload];
