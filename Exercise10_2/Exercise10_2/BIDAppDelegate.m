@@ -38,22 +38,13 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     __block UIBackgroundTaskIdentifier bgTask;
     bgTask = [application beginBackgroundTaskWithExpirationHandler:^{
-        
-       
-        
         [application endBackgroundTask:bgTask];
-        
         bgTask = UIBackgroundTaskInvalid;
-        
     }];
     
-    
     UILocalNotification *localfi=[[UILocalNotification alloc]init];
-    
     //Hien thi Notification sau 1 phut vao Background
     //    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit fromDate:[NSDate date]];
     //    NSInteger day=[components day];
@@ -64,7 +55,6 @@
     //    NSInteger currentSecond = [components second];
     //    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     //    [dateFormat setDateFormat:@"dd/MM/yyyy hh:mm:ss aa"];
-
     //NSString *dateNotifi=[NSString stringWithFormat:@"%d/%d/%d %d:%d:%d AM",day,month,year,currentHour,currentMinute,currentSecond];
      //NSDate *dateOne=[dateFormat dateFromString:dateNotifi];
     //localfi.fireDate=dateOne;
