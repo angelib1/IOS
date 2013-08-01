@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B5A197417AA5FC00061F267 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5A197317AA5FC00061F267 /* 11.png */; };
+		4B84CE6817AA3D6700DD70A3 /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B84CE6717AA3D6700DD70A3 /* image2.png */; };
 		4B90AF1917A8FE9400B919E0 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B90AF1717A8FE9400B919E0 /* 1.png */; };
 		4B90AF1A17A8FE9400B919E0 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B90AF1817A8FE9400B919E0 /* 2.png */; };
-		4B90AF1D17A8FF1F00B919E0 /* BIDAddCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B90AF1C17A8FF1E00B919E0 /* BIDAddCell.m */; };
 		4B90AF2017A9107A00B919E0 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B90AF1E17A9107A00B919E0 /* 3.png */; };
 		4B90AF2117A9107A00B919E0 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B90AF1F17A9107A00B919E0 /* 4.png */; };
 		4BA4E7F317A8E54E00BC07B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA4E7F217A8E54E00BC07B8 /* UIKit.framework */; };
@@ -24,13 +25,20 @@
 		4BA4E80C17A8E54E00BC07B8 /* BIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4E80B17A8E54E00BC07B8 /* BIDViewController.m */; };
 		4BA4E80F17A8E54E00BC07B8 /* BIDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BA4E80D17A8E54E00BC07B8 /* BIDViewController.xib */; };
 		4BA4E81617A8E65A00BC07B8 /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BA4E81517A8E65A00BC07B8 /* image3.png */; };
+		4BE3F8CD17AA01DF004A5DE9 /* BIDAddCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE3F8CC17AA01DF004A5DE9 /* BIDAddCell.m */; };
+		4BE3F8D817AA0FA1004A5DE9 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BE3F8D617AA0FA1004A5DE9 /* 5.png */; };
+		4BE3F8D917AA0FA1004A5DE9 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BE3F8D717AA0FA1004A5DE9 /* 6.png */; };
+		4BE3F8DB17AA2B94004A5DE9 /* BIDAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BE3F8DA17AA2B94004A5DE9 /* BIDAddCell.xib */; };
+		4BE3F8DD17AA2FE3004A5DE9 /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4BE3F8DC17AA2FE3004A5DE9 /* images.jpg */; };
+		4BE3F8DF17AA30C4004A5DE9 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BE3F8DE17AA30C4004A5DE9 /* image.png */; };
+		4BE3F8E117AA317A004A5DE9 /* ip.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BE3F8E017AA317A004A5DE9 /* ip.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B5A197317AA5FC00061F267 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 11.png; path = ../11.png; sourceTree = "<group>"; };
+		4B84CE6717AA3D6700DD70A3 /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image2.png; path = ../image2.png; sourceTree = "<group>"; };
 		4B90AF1717A8FE9400B919E0 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = ../1.png; sourceTree = "<group>"; };
 		4B90AF1817A8FE9400B919E0 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.png; path = ../2.png; sourceTree = "<group>"; };
-		4B90AF1B17A8FF1E00B919E0 /* BIDAddCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDAddCell.h; sourceTree = "<group>"; };
-		4B90AF1C17A8FF1E00B919E0 /* BIDAddCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDAddCell.m; sourceTree = "<group>"; };
 		4B90AF1E17A9107A00B919E0 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3.png; path = ../3.png; sourceTree = "<group>"; };
 		4B90AF1F17A9107A00B919E0 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 4.png; path = ../4.png; sourceTree = "<group>"; };
 		4BA4E7EF17A8E54E00BC07B8 /* Exersice11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exersice11.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +58,14 @@
 		4BA4E80B17A8E54E00BC07B8 /* BIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDViewController.m; sourceTree = "<group>"; };
 		4BA4E80E17A8E54E00BC07B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BIDViewController.xib; sourceTree = "<group>"; };
 		4BA4E81517A8E65A00BC07B8 /* image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image3.png; path = ../image3.png; sourceTree = "<group>"; };
+		4BE3F8CB17AA01DF004A5DE9 /* BIDAddCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDAddCell.h; sourceTree = "<group>"; };
+		4BE3F8CC17AA01DF004A5DE9 /* BIDAddCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDAddCell.m; sourceTree = "<group>"; };
+		4BE3F8D617AA0FA1004A5DE9 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 5.png; path = ../5.png; sourceTree = "<group>"; };
+		4BE3F8D717AA0FA1004A5DE9 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 6.png; path = ../6.png; sourceTree = "<group>"; };
+		4BE3F8DA17AA2B94004A5DE9 /* BIDAddCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BIDAddCell.xib; path = ../BIDAddCell.xib; sourceTree = "<group>"; };
+		4BE3F8DC17AA2FE3004A5DE9 /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = images.jpg; path = ../images.jpg; sourceTree = "<group>"; };
+		4BE3F8DE17AA30C4004A5DE9 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image.png; path = ../image.png; sourceTree = "<group>"; };
+		4BE3F8E017AA317A004A5DE9 /* ip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ip.png; path = ../ip.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +118,9 @@
 				4BA4E80B17A8E54E00BC07B8 /* BIDViewController.m */,
 				4BA4E80D17A8E54E00BC07B8 /* BIDViewController.xib */,
 				4BA4E7F917A8E54E00BC07B8 /* Supporting Files */,
-				4B90AF1B17A8FF1E00B919E0 /* BIDAddCell.h */,
-				4B90AF1C17A8FF1E00B919E0 /* BIDAddCell.m */,
+				4BE3F8CB17AA01DF004A5DE9 /* BIDAddCell.h */,
+				4BE3F8DA17AA2B94004A5DE9 /* BIDAddCell.xib */,
+				4BE3F8CC17AA01DF004A5DE9 /* BIDAddCell.m */,
 			);
 			path = Exersice11;
 			sourceTree = "<group>";
@@ -111,6 +128,13 @@
 		4BA4E7F917A8E54E00BC07B8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4B5A197317AA5FC00061F267 /* 11.png */,
+				4B84CE6717AA3D6700DD70A3 /* image2.png */,
+				4BE3F8E017AA317A004A5DE9 /* ip.png */,
+				4BE3F8DE17AA30C4004A5DE9 /* image.png */,
+				4BE3F8DC17AA2FE3004A5DE9 /* images.jpg */,
+				4BE3F8D617AA0FA1004A5DE9 /* 5.png */,
+				4BE3F8D717AA0FA1004A5DE9 /* 6.png */,
 				4B90AF1E17A9107A00B919E0 /* 3.png */,
 				4B90AF1F17A9107A00B919E0 /* 4.png */,
 				4B90AF1717A8FE9400B919E0 /* 1.png */,
@@ -189,6 +213,14 @@
 				4B90AF1A17A8FE9400B919E0 /* 2.png in Resources */,
 				4B90AF2017A9107A00B919E0 /* 3.png in Resources */,
 				4B90AF2117A9107A00B919E0 /* 4.png in Resources */,
+				4BE3F8D817AA0FA1004A5DE9 /* 5.png in Resources */,
+				4BE3F8D917AA0FA1004A5DE9 /* 6.png in Resources */,
+				4BE3F8DB17AA2B94004A5DE9 /* BIDAddCell.xib in Resources */,
+				4BE3F8DD17AA2FE3004A5DE9 /* images.jpg in Resources */,
+				4BE3F8DF17AA30C4004A5DE9 /* image.png in Resources */,
+				4BE3F8E117AA317A004A5DE9 /* ip.png in Resources */,
+				4B84CE6817AA3D6700DD70A3 /* image2.png in Resources */,
+				4B5A197417AA5FC00061F267 /* 11.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +234,7 @@
 				4BA4E7FF17A8E54E00BC07B8 /* main.m in Sources */,
 				4BA4E80317A8E54E00BC07B8 /* BIDAppDelegate.m in Sources */,
 				4BA4E80C17A8E54E00BC07B8 /* BIDViewController.m in Sources */,
-				4B90AF1D17A8FF1F00B919E0 /* BIDAddCell.m in Sources */,
+				4BE3F8CD17AA01DF004A5DE9 /* BIDAddCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

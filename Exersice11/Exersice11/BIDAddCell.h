@@ -2,14 +2,16 @@
 //  BIDAddCell.h
 //  Exersice11
 //
-//  Created by Nguyen Thanh Son on 7/31/13.
+//  Created by Nguyen Thanh Son on 8/1/13.
 //  Copyright (c) 2013 Nguyen Thanh Son. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface BIDAddCell : UIView
-@property (nonatomic, strong) UIImageView *image;
-@property (nonatomic, copy) UILabel *label;
-@property (nonatomic, copy) UILabel *subLabel;
+@interface BIDAddCell : UITableViewCell
+@property (strong, nonatomic) UILabel *Label;
+@property (strong, nonatomic) UILabel *subLabel;
+@property (strong, nonatomic) UILabel *subLabelInfo;
+@property (strong, nonatomic) UIImageView *image;
+
 @end
