@@ -1,8 +1,8 @@
 //
 //  BIDAppDelegate.h
-//  Exersice11
+//  Exercise11_1
 //
-//  Created by Nguyen Thanh Son on 7/31/13.
+//  Created by Nguyen Thanh Son on 8/5/13.
 //  Copyright (c) 2013 Nguyen Thanh Son. All rights reserved.
 //
 

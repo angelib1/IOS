@@ -16,7 +16,7 @@ static NSString *Identifier=@"Identifier";
 BIDAddCell *cell;
 @implementation BIDViewController
 @synthesize tabBar,navigationBar;
-@synthesize txtSearch,viewScreen;
+@synthesize txtSearch,viewScreen,btnAdd;
 @synthesize computer,tableView;
 - (void)viewDidLoad
 {
@@ -38,7 +38,8 @@ BIDAddCell *cell;
     [navigationBar setTintColor:[UIColor colorWithWhite:0 alpha:0.1]];
     UINavigationItem *firstItem=[[UINavigationItem alloc]init];
     firstItem.rightBarButtonItem=skipBtn;
-    firstItem.leftBarButtonItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(backClick:)];
+    firstItem.leftBarButtonItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonItemStylePlain target:self action:@selector(backClick:)];
+    
     firstItem.rightBarButtonItem.tintColor=[UIColor blueColor];
     firstItem.leftBarButtonItem.tintColor=[UIColor blueColor];
     [firstItem setTitle:@"Skip Image"];
@@ -46,10 +47,19 @@ BIDAddCell *cell;
     
     //TextField 
     txtSearch=[[UITextField alloc]init];
+    UIFont *b=[UIFont fontWithName:@"Helvetica" size:14];
     txtSearch.frame=CGRectMake(10, navigationBar.frame.size.height+10, [UIScreen mainScreen].applicationFrame.size.width-20, 30);
     txtSearch.backgroundColor=[UIColor whiteColor];
+    txtSearch.font=b;
     txtSearch.contentVerticalAlignment=UIControlContentVerticalAlignmentCenter;
     txtSearch.placeholder=@"Search";
+    txtSearch.delegate=self;
+    
+    //Button add
+    btnAdd=[UIButton buttonWithType:UIButtonTypeContactAdd];
+    btnAdd.frame=CGRectMake(txtSearch.frame.size.width-txtSearch.frame.size.height, 0, txtSearch.frame.size.height, txtSearch.frame.size.height);
+    [self.txtSearch addSubview:btnAdd];
+    btnAdd.hidden=YES;
     
     //tableView
     tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, navigationBar.frame.size.height+txtSearch.frame.size.height+20, [UIScreen mainScreen].applicationFrame.size.width, [UIScreen mainScreen].applicationFrame.size.height) style:UITableViewStylePlain];
@@ -62,12 +72,12 @@ BIDAddCell *cell;
 
     [tableView registerClass:[BIDAddCell class] forCellReuseIdentifier:Identifier];
     cell=[[BIDAddCell alloc]init];
-    computer=@[@{@"image": @"1",@"label":@"This is image 1 is very beautiful"},
-               @{@"image": @"2",@"label":@"This is image 2"},
-               @{@"image": @"3",@"label":@"This is 3"},
-               @{@"image": @"4",@"label":@"This is image 4"},
-               @{@"image": @"5",@"label":@"This is 5"},
-               @{@"image": @"6",@"label":@"This is image 6"}];
+    computer=@[@{@"image": @"1",@"label":@"Golden image nature"},
+               @{@"image": @"2",@"label":@"Greean left"},
+               @{@"image": @"3",@"label":@"Flower white"},
+               @{@"image": @"4",@"label":@"Cloud computing"},
+               @{@"image": @"5",@"label":@"Translate file"},
+               @{@"image": @"6",@"label":@"Golden pound day"}];
     
     
     
@@ -78,12 +88,29 @@ BIDAddCell *cell;
    
     
 }
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    btnAdd.hidden=NO;
 }
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    btnAdd.hidden=YES;
+}
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return [computer count];
 }
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 20;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *headerView = [[UIView alloc] init];
+    headerView.backgroundColor = [UIColor clearColor];
+    return headerView;
+}
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     //Dinh nghia kich thuoc cua font
@@ -94,16 +121,14 @@ BIDAddCell *cell;
     size=[str sizeWithFont:a];
     
     //khai bao cell va cac thuoc tinh
-    cell.layer.borderColor=[[UIColor colorWithWhite:0 alpha:0.1]CGColor];
-    cell.layer.borderWidth=10;
-    UIView *bgView = [[UIView alloc] initWithFrame:cell.frame];
-    bgView.backgroundColor = [UIColor colorWithRed:51/255 green:153/255 blue:255 alpha:1];
-    cell.backgroundView = bgView;
     cell=[self.tableView dequeueReusableCellWithIdentifier:Identifier];
-    NSDictionary *rowData=self.computer[indexPath.row];
+    UIView *bgView = [[UIView alloc] initWithFrame:cell.frame];
+    bgView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3];
+    cell.backgroundView = bgView;
+    NSDictionary *rowData=self.computer[indexPath.section];
     UIImage *img=[UIImage imageNamed:[NSString stringWithFormat:@"%@.png",rowData[@"image"]]];
     cell.image.image=img;
-    cell.frame = CGRectOffset(cell.frame, 10, 10);
+    //cell.frame = CGRectOffset(cell.frame, 10, 10);
 
     //lay thong tin cua hinh anh hien thi tren cell roi gan text cho cac label
     NSString* path = [[NSBundle mainBundle] pathForResource:rowData[@"image"] ofType:@"png"];
@@ -117,11 +142,11 @@ BIDAddCell *cell;
     NSString *subInfoText=[NSString stringWithFormat:@"Size:%lld",fileAttributeDict.fileSize];
     if((50+[string sizeWithFont:a].width)>(170+[subInfoText sizeWithFont:b].width))
     {
-        cell.Label.frame=CGRectMake(0  ,10, [string sizeWithFont:a].width, 20);
+        cell.Label.frame=CGRectMake(0  ,0, [string sizeWithFont:a].width, 20);
     }
     else
     {
-        cell.Label.frame=CGRectMake(0  ,10, [string sizeWithFont:a].width+20,20);
+        cell.Label.frame=CGRectMake(0  ,0, [string sizeWithFont:a].width+20,20);
     }
     cell.Label.text=string;
     cell.subLabel.text=subText;
@@ -130,7 +155,7 @@ BIDAddCell *cell;
     return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 64;
+    return 40;
 }
 -(IBAction)hideKeybroad:(id)sender{
     [self.view endEditing:YES];

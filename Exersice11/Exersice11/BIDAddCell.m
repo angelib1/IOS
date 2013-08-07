@@ -17,20 +17,20 @@
     if (self) {
         UIFont *a=[UIFont fontWithName:@"Helvetica" size:14];
         // Initialization code
-        Label=[[UILabel alloc]initWithFrame:CGRectMake(0, 10, 300, 20)];
+        Label=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 300, 20)];
         Label.backgroundColor=[UIColor clearColor];
         Label.text=@"Label";
         Label.textColor=[UIColor whiteColor];
         [self addSubview:Label];
-        image=[[UIImageView alloc]initWithFrame:CGRectMake(5, 15, 45, 35)];
+        image=[[UIImageView alloc]initWithFrame:CGRectMake(5, 5, 35, 35)];
         [self addSubview:image];
-        subLabel=[[UILabel alloc]initWithFrame:CGRectMake(50, 30, 100, 20)];
+        subLabel=[[UILabel alloc]initWithFrame:CGRectMake(50, 20, 100, 20)];
         subLabel.text=@"Label";
         subLabel.textColor=[UIColor orangeColor];
         subLabel.backgroundColor=[UIColor clearColor];
         subLabel.font=a;
         [self addSubview:subLabel];
-        subLabelInfo=[[UILabel alloc]initWithFrame:CGRectMake(170, 30, 100, 20)];
+        subLabelInfo=[[UILabel alloc]initWithFrame:CGRectMake(170, 20, 100, 20)];
         subLabelInfo.text=@"Label";
         subLabelInfo.textColor=[UIColor orangeColor];
         subLabelInfo.font=a;
