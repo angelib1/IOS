@@ -66,17 +66,19 @@ static NSString *Identifier=@"Identifier";
     [tableView registerClass:[BIDAddCell class] forCellReuseIdentifier:Identifier];
     //khai bao cell va cac thuoc tinh
     cell=[tableView dequeueReusableCellWithIdentifier:Identifier];
-    NSString *string=[NSString stringWithFormat:@"%@" ,[item objectAtIndex:indexPath.section]];
+    NSString *string=[NSString stringWithFormat:@"  %@  " ,[item objectAtIndex:indexPath.section]];
     cell.Label.frame=CGRectMake(10  ,0, [string sizeWithFont:a].width, 30);
     cell.Label.text=string;
     return cell;
 
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 40;
+    return 32;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 10;
+    if(section==0)
+    return 50;
+    else return 15;
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView *sectionView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 10)];
@@ -89,9 +91,13 @@ static NSString *Identifier=@"Identifier";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     cell=(BIDAddCell *)[tableView cellForRowAtIndexPath:indexPath];
+    cell.selected=NO;
     NSLog(@"%@",cell.Label.text);
-    [itemDelegate itemChoice:cell.Label.text];
+    NSString *str=[cell.Label.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+
+    [itemDelegate itemChoice:str];
 }
 
 @end

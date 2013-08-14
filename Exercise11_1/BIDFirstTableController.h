@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-@protocol TagDelegate <NSObject>
--(void)tag:(int)Tag;
+@protocol FirstDelegate <NSObject>
+-(void)first:(NSString *)string;
 @end
 @interface BIDFirstTableController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) NSMutableArray *item;
 @property (strong, nonatomic) UIButton *Button;
 @property (strong, nonatomic) NSMutableArray *arrayButton;
-@property (nonatomic, retain) id<TagDelegate> tagDelegate;
+@property (nonatomic, retain) id<FirstDelegate> firstDelegate;
 -(IBAction)del:(id)sender;
 @end

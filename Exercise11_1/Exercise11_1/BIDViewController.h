@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BIDSecondTableController.h"
 #import "BIDFirstTableController.h"
-@interface BIDViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,ChoiceItemDelegate,TagDelegate>
+@interface BIDViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,ChoiceItemDelegate,FirstDelegate>
 @property (nonatomic, strong) UITableView *tableViewList;
 @property (nonatomic, strong) UITableView *tableViewChoice;
 
@@ -22,10 +22,11 @@
 @property (nonatomic, strong) UITextField *txtSearch;
 @property (nonatomic, strong) UISearchBar *searchBar;
 @property (nonatomic, strong) UIButton *btnAdd;
--(IBAction)skipClick:(id)sender;
+-(IBAction)nextClick:(id)sender;
 -(IBAction)backClick:(id)sender;
 -(IBAction)hideKeybroad:(id)sender;
 -(IBAction)textChange:(id)sender;
 -(IBAction)ChoiceItem:(id)sender;
 -(void)changeView;
+-(UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;
 @end

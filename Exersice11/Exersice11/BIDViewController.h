@@ -7,16 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface BIDViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
+@protocol DelegateInfo <NSObject>
+-(void)info:(NSMutableArray *)arrayInfo;
+@end
+@interface BIDViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,UINavigationControllerDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *computer;
 @property (nonatomic, strong) UIView *viewScreen;
-@property (nonatomic, strong) UITabBar *tabBar;
 @property (nonatomic, strong) UINavigationBar *navigationBar;
 @property (nonatomic, strong) UITextField *txtSearch;
 @property (nonatomic, strong) UIButton *btnAdd;
+@property (nonatomic, strong) id<DelegateInfo> delegateInfo;
 -(IBAction)skipClick:(id)sender;
 -(IBAction)backClick:(id)sender;
--(IBAction)hideKeybroad:(id)sender;
+-(UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;
 @end

@@ -15,7 +15,7 @@
 static NSString *Identifier=@"Identifier";
 BIDAddCellFirstCell *cell;
 @implementation BIDFirstTableController
-@synthesize item,Button,tagDelegate,arrayButton;
+@synthesize item,Button,firstDelegate,arrayButton;
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -24,6 +24,7 @@ BIDAddCellFirstCell *cell;
         item=[[NSMutableArray alloc]init];
         cell=[[BIDAddCellFirstCell alloc]init];
         arrayButton=[[NSMutableArray alloc]init];
+        
     }
     return self;
 }
@@ -65,22 +66,22 @@ BIDAddCellFirstCell *cell;
     [tableView registerClass:[BIDAddCellFirstCell class] forCellReuseIdentifier:Identifier];
     //khai bao cell va cac thuoc tinh
     cell=[tableView dequeueReusableCellWithIdentifier:Identifier];
-    NSString *string=[NSString stringWithFormat:@"%@" ,[item objectAtIndex:indexPath.row]];
-    cell.Label.frame=CGRectMake(10  ,0, [string sizeWithFont:a].width+20, 30);
-    
+    NSString *string=[NSString stringWithFormat:@"  %@  " ,[item objectAtIndex:indexPath.row]];
+    //cell.Label.frame=CGRectMake(10  ,0, [string sizeWithFont:a].width+20, 30);
     cell.Label.text=string;
-    
-        Button=[UIButton buttonWithType:UIButtonTypeCustom];
-        Button.backgroundColor=[UIColor whiteColor];
-        [Button setTitle:@"-" forState:UIControlStateNormal];
-        [Button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-        Button.frame=CGRectMake(cell.Label.frame.origin.x+[string sizeWithFont:a].width+4, 7, 16, 16);
-        Button.layer.cornerRadius=8;
-        [Button setTag:indexPath.row];
+    cell.selectionStyle=UITableViewCellSelectionStyleNone;
+    if([arrayButton count]<=(indexPath.row)){
+    Button=[UIButton buttonWithType:UIButtonTypeCustom];
+    Button.backgroundColor=[UIColor whiteColor];
+    [Button setTitle:@"-" forState:UIControlStateNormal];
+    [Button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    Button.frame=CGRectMake(cell.Label.frame.origin.x+184, 7, 16, 16);
+    Button.layer.cornerRadius=8;
     [arrayButton addObject:Button];
-        [Button addTarget:self action:@selector(del:) forControlEvents:UIControlEventTouchUpInside];
-        [cell addSubview:Button];
-    NSLog(@"%d",indexPath.row);
+    [Button addTarget:self action:@selector(del:) forControlEvents:UIControlEventTouchUpInside];
+    [cell addSubview:[arrayButton objectAtIndex:indexPath.row]];
+    }
+    
 
     
         return cell;
@@ -88,65 +89,24 @@ BIDAddCellFirstCell *cell;
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 32;
 }
+
 -(IBAction)del:(id)sender{
-    
-    [tagDelegate tag:((UIButton *)sender).tag];
-    for(UIButton *btn in arrayButton){
-        
+    cell=(BIDAddCellFirstCell *)(((UIButton *)sender).superview);
+    for (UIButton *btn in arrayButton){
+        [btn removeFromSuperview];
     }
-    [((UIButton *)sender) removeFromSuperview];
-   
+    //[(UIButton *)sender removeFromSuperview];
+    [arrayButton removeAllObjects];
+    NSString *str=[cell.Label.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    [firstDelegate first:str];
+    
 }
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    
 }
 
 @end

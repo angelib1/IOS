@@ -25,6 +25,16 @@
 		4BA4E80C17A8E54E00BC07B8 /* BIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4E80B17A8E54E00BC07B8 /* BIDViewController.m */; };
 		4BA4E80F17A8E54E00BC07B8 /* BIDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BA4E80D17A8E54E00BC07B8 /* BIDViewController.xib */; };
 		4BA4E81617A8E65A00BC07B8 /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BA4E81517A8E65A00BC07B8 /* image3.png */; };
+		4BB69A8C17BB5D2800E287D6 /* BIDViewThreeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB69A8A17BB5D2800E287D6 /* BIDViewThreeController.m */; };
+		4BB69A8D17BB5D2800E287D6 /* BIDViewThreeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BB69A8B17BB5D2800E287D6 /* BIDViewThreeController.xib */; };
+		4BB69A9017BB5E9600E287D6 /* BIDFirstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB69A8F17BB5E9600E287D6 /* BIDFirstCell.m */; };
+		4BB69A9317BB5EEC00E287D6 /* BIDFirstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB69A9217BB5EEC00E287D6 /* BIDFirstTableViewController.m */; };
+		4BB69A9617BB5FA100E287D6 /* BIDSecondTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB69A9517BB5FA100E287D6 /* BIDSecondTableViewController.m */; };
+		4BB69A9917BB5FB700E287D6 /* BIDSecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB69A9817BB5FB700E287D6 /* BIDSecondCell.m */; };
+		4BB69A9F17BB6A2600E287D6 /* iconskip.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BB69A9D17BB6A2600E287D6 /* iconskip.png */; };
+		4BB69AA017BB6A2600E287D6 /* iconupload.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BB69A9E17BB6A2600E287D6 /* iconupload.png */; };
+		4BD8233B17BB549B00FAAA96 /* BIDViewTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD8233917BB549B00FAAA96 /* BIDViewTwo.m */; };
+		4BD8233C17BB549B00FAAA96 /* BIDViewTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BD8233A17BB549B00FAAA96 /* BIDViewTwo.xib */; };
 		4BE3F8CD17AA01DF004A5DE9 /* BIDAddCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE3F8CC17AA01DF004A5DE9 /* BIDAddCell.m */; };
 		4BE3F8D817AA0FA1004A5DE9 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BE3F8D617AA0FA1004A5DE9 /* 5.png */; };
 		4BE3F8D917AA0FA1004A5DE9 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BE3F8D717AA0FA1004A5DE9 /* 6.png */; };
@@ -32,6 +42,13 @@
 		4BE3F8DD17AA2FE3004A5DE9 /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4BE3F8DC17AA2FE3004A5DE9 /* images.jpg */; };
 		4BE3F8DF17AA30C4004A5DE9 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BE3F8DE17AA30C4004A5DE9 /* image.png */; };
 		4BE3F8E117AA317A004A5DE9 /* ip.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BE3F8E017AA317A004A5DE9 /* ip.png */; };
+		4BF4173B17BA3A8800E5A970 /* back-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BF4173417BA3A8800E5A970 /* back-icon.png */; };
+		4BF4173C17BA3A8800E5A970 /* icon_.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BF4173517BA3A8800E5A970 /* icon_.png */; };
+		4BF4173D17BA3A8800E5A970 /* iconn.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BF4173617BA3A8800E5A970 /* iconn.png */; };
+		4BF4173E17BA3A8800E5A970 /* IMG_3255.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4BF4173717BA3A8800E5A970 /* IMG_3255.JPG */; };
+		4BF4173F17BA3A8800E5A970 /* IMG_3295.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4BF4173817BA3A8800E5A970 /* IMG_3295.JPG */; };
+		4BF4174017BA3A8800E5A970 /* P1110290.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4BF4173917BA3A8800E5A970 /* P1110290.JPG */; };
+		4BF4174117BA3A8800E5A970 /* SAM_0490.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4BF4173A17BA3A8800E5A970 /* SAM_0490.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,23 +66,46 @@
 		4BA4E7FC17A8E54E00BC07B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4BA4E7FE17A8E54E00BC07B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4BA4E80017A8E54E00BC07B8 /* Exersice11-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Exersice11-Prefix.pch"; sourceTree = "<group>"; };
-		4BA4E80117A8E54E00BC07B8 /* BIDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDAppDelegate.h; sourceTree = "<group>"; };
-		4BA4E80217A8E54E00BC07B8 /* BIDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDAppDelegate.m; sourceTree = "<group>"; };
+		4BA4E80117A8E54E00BC07B8 /* BIDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BIDAppDelegate.h; path = Exersice11/BIDAppDelegate.h; sourceTree = "<group>"; };
+		4BA4E80217A8E54E00BC07B8 /* BIDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BIDAppDelegate.m; path = Exersice11/BIDAppDelegate.m; sourceTree = "<group>"; };
 		4BA4E80417A8E54E00BC07B8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		4BA4E80617A8E54E00BC07B8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		4BA4E80817A8E54E00BC07B8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		4BA4E80A17A8E54E00BC07B8 /* BIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDViewController.h; sourceTree = "<group>"; };
-		4BA4E80B17A8E54E00BC07B8 /* BIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDViewController.m; sourceTree = "<group>"; };
+		4BA4E80A17A8E54E00BC07B8 /* BIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BIDViewController.h; path = Exersice11/BIDViewController.h; sourceTree = "<group>"; };
+		4BA4E80B17A8E54E00BC07B8 /* BIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BIDViewController.m; path = Exersice11/BIDViewController.m; sourceTree = "<group>"; };
 		4BA4E80E17A8E54E00BC07B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BIDViewController.xib; sourceTree = "<group>"; };
 		4BA4E81517A8E65A00BC07B8 /* image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image3.png; path = ../image3.png; sourceTree = "<group>"; };
-		4BE3F8CB17AA01DF004A5DE9 /* BIDAddCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDAddCell.h; sourceTree = "<group>"; };
-		4BE3F8CC17AA01DF004A5DE9 /* BIDAddCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDAddCell.m; sourceTree = "<group>"; };
+		4BB69A8917BB5D2800E287D6 /* BIDViewThreeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDViewThreeController.h; sourceTree = "<group>"; };
+		4BB69A8A17BB5D2800E287D6 /* BIDViewThreeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDViewThreeController.m; sourceTree = "<group>"; };
+		4BB69A8B17BB5D2800E287D6 /* BIDViewThreeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BIDViewThreeController.xib; sourceTree = "<group>"; };
+		4BB69A8E17BB5E9600E287D6 /* BIDFirstCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDFirstCell.h; sourceTree = "<group>"; };
+		4BB69A8F17BB5E9600E287D6 /* BIDFirstCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDFirstCell.m; sourceTree = "<group>"; };
+		4BB69A9117BB5EEC00E287D6 /* BIDFirstTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDFirstTableViewController.h; sourceTree = "<group>"; };
+		4BB69A9217BB5EEC00E287D6 /* BIDFirstTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDFirstTableViewController.m; sourceTree = "<group>"; };
+		4BB69A9417BB5FA100E287D6 /* BIDSecondTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDSecondTableViewController.h; sourceTree = "<group>"; };
+		4BB69A9517BB5FA100E287D6 /* BIDSecondTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDSecondTableViewController.m; sourceTree = "<group>"; };
+		4BB69A9717BB5FB700E287D6 /* BIDSecondCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDSecondCell.h; sourceTree = "<group>"; };
+		4BB69A9817BB5FB700E287D6 /* BIDSecondCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDSecondCell.m; sourceTree = "<group>"; };
+		4BB69A9D17BB6A2600E287D6 /* iconskip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconskip.png; path = ../iconskip.png; sourceTree = "<group>"; };
+		4BB69A9E17BB6A2600E287D6 /* iconupload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconupload.png; path = ../iconupload.png; sourceTree = "<group>"; };
+		4BD8233817BB549B00FAAA96 /* BIDViewTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDViewTwo.h; sourceTree = "<group>"; };
+		4BD8233917BB549B00FAAA96 /* BIDViewTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDViewTwo.m; sourceTree = "<group>"; };
+		4BD8233A17BB549B00FAAA96 /* BIDViewTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BIDViewTwo.xib; sourceTree = "<group>"; };
+		4BE3F8CB17AA01DF004A5DE9 /* BIDAddCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BIDAddCell.h; path = Exersice11/BIDAddCell.h; sourceTree = "<group>"; };
+		4BE3F8CC17AA01DF004A5DE9 /* BIDAddCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BIDAddCell.m; path = Exersice11/BIDAddCell.m; sourceTree = "<group>"; };
 		4BE3F8D617AA0FA1004A5DE9 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 5.png; path = ../5.png; sourceTree = "<group>"; };
 		4BE3F8D717AA0FA1004A5DE9 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 6.png; path = ../6.png; sourceTree = "<group>"; };
 		4BE3F8DA17AA2B94004A5DE9 /* BIDAddCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BIDAddCell.xib; path = ../BIDAddCell.xib; sourceTree = "<group>"; };
 		4BE3F8DC17AA2FE3004A5DE9 /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = images.jpg; path = ../images.jpg; sourceTree = "<group>"; };
 		4BE3F8DE17AA30C4004A5DE9 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image.png; path = ../image.png; sourceTree = "<group>"; };
 		4BE3F8E017AA317A004A5DE9 /* ip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ip.png; path = ../ip.png; sourceTree = "<group>"; };
+		4BF4173417BA3A8800E5A970 /* back-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-icon.png"; path = "../back-icon.png"; sourceTree = "<group>"; };
+		4BF4173517BA3A8800E5A970 /* icon_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_.png; path = ../icon_.png; sourceTree = "<group>"; };
+		4BF4173617BA3A8800E5A970 /* iconn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconn.png; path = ../iconn.png; sourceTree = "<group>"; };
+		4BF4173717BA3A8800E5A970 /* IMG_3255.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_3255.JPG; path = ../IMG_3255.JPG; sourceTree = "<group>"; };
+		4BF4173817BA3A8800E5A970 /* IMG_3295.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_3295.JPG; path = ../IMG_3295.JPG; sourceTree = "<group>"; };
+		4BF4173917BA3A8800E5A970 /* P1110290.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = P1110290.JPG; path = ../P1110290.JPG; sourceTree = "<group>"; };
+		4BF4173A17BA3A8800E5A970 /* SAM_0490.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = SAM_0490.JPG; path = ../SAM_0490.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +126,11 @@
 			isa = PBXGroup;
 			children = (
 				4BA4E7F817A8E54E00BC07B8 /* Exersice11 */,
+				4BB69A9A17BB672000E287D6 /* First Screen */,
 				4BA4E7F117A8E54E00BC07B8 /* Frameworks */,
 				4BA4E7F017A8E54E00BC07B8 /* Products */,
+				4BB69A9B17BB675000E287D6 /* Second Screen */,
+				4BB69A9C17BB676900E287D6 /* Third Screen */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,15 +155,8 @@
 		4BA4E7F817A8E54E00BC07B8 /* Exersice11 */ = {
 			isa = PBXGroup;
 			children = (
-				4BA4E80117A8E54E00BC07B8 /* BIDAppDelegate.h */,
-				4BA4E80217A8E54E00BC07B8 /* BIDAppDelegate.m */,
-				4BA4E80A17A8E54E00BC07B8 /* BIDViewController.h */,
-				4BA4E80B17A8E54E00BC07B8 /* BIDViewController.m */,
-				4BA4E80D17A8E54E00BC07B8 /* BIDViewController.xib */,
 				4BA4E7F917A8E54E00BC07B8 /* Supporting Files */,
-				4BE3F8CB17AA01DF004A5DE9 /* BIDAddCell.h */,
 				4BE3F8DA17AA2B94004A5DE9 /* BIDAddCell.xib */,
-				4BE3F8CC17AA01DF004A5DE9 /* BIDAddCell.m */,
 			);
 			path = Exersice11;
 			sourceTree = "<group>";
@@ -128,6 +164,15 @@
 		4BA4E7F917A8E54E00BC07B8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4BB69A9D17BB6A2600E287D6 /* iconskip.png */,
+				4BB69A9E17BB6A2600E287D6 /* iconupload.png */,
+				4BF4173417BA3A8800E5A970 /* back-icon.png */,
+				4BF4173517BA3A8800E5A970 /* icon_.png */,
+				4BF4173617BA3A8800E5A970 /* iconn.png */,
+				4BF4173717BA3A8800E5A970 /* IMG_3255.JPG */,
+				4BF4173817BA3A8800E5A970 /* IMG_3295.JPG */,
+				4BF4173917BA3A8800E5A970 /* P1110290.JPG */,
+				4BF4173A17BA3A8800E5A970 /* SAM_0490.JPG */,
 				4B5A197317AA5FC00061F267 /* 11.png */,
 				4B84CE6717AA3D6700DD70A3 /* image2.png */,
 				4BE3F8E017AA317A004A5DE9 /* ip.png */,
@@ -149,6 +194,48 @@
 				4BA4E80817A8E54E00BC07B8 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4BB69A9A17BB672000E287D6 /* First Screen */ = {
+			isa = PBXGroup;
+			children = (
+				4BA4E80117A8E54E00BC07B8 /* BIDAppDelegate.h */,
+				4BA4E80217A8E54E00BC07B8 /* BIDAppDelegate.m */,
+				4BA4E80A17A8E54E00BC07B8 /* BIDViewController.h */,
+				4BA4E80B17A8E54E00BC07B8 /* BIDViewController.m */,
+				4BA4E80D17A8E54E00BC07B8 /* BIDViewController.xib */,
+				4BE3F8CB17AA01DF004A5DE9 /* BIDAddCell.h */,
+				4BE3F8CC17AA01DF004A5DE9 /* BIDAddCell.m */,
+			);
+			name = "First Screen";
+			sourceTree = "<group>";
+		};
+		4BB69A9B17BB675000E287D6 /* Second Screen */ = {
+			isa = PBXGroup;
+			children = (
+				4BD8233817BB549B00FAAA96 /* BIDViewTwo.h */,
+				4BD8233917BB549B00FAAA96 /* BIDViewTwo.m */,
+				4BD8233A17BB549B00FAAA96 /* BIDViewTwo.xib */,
+			);
+			name = "Second Screen";
+			sourceTree = "<group>";
+		};
+		4BB69A9C17BB676900E287D6 /* Third Screen */ = {
+			isa = PBXGroup;
+			children = (
+				4BB69A9717BB5FB700E287D6 /* BIDSecondCell.h */,
+				4BB69A9817BB5FB700E287D6 /* BIDSecondCell.m */,
+				4BB69A9417BB5FA100E287D6 /* BIDSecondTableViewController.h */,
+				4BB69A9517BB5FA100E287D6 /* BIDSecondTableViewController.m */,
+				4BB69A9117BB5EEC00E287D6 /* BIDFirstTableViewController.h */,
+				4BB69A9217BB5EEC00E287D6 /* BIDFirstTableViewController.m */,
+				4BB69A8E17BB5E9600E287D6 /* BIDFirstCell.h */,
+				4BB69A8F17BB5E9600E287D6 /* BIDFirstCell.m */,
+				4BB69A8917BB5D2800E287D6 /* BIDViewThreeController.h */,
+				4BB69A8A17BB5D2800E287D6 /* BIDViewThreeController.m */,
+				4BB69A8B17BB5D2800E287D6 /* BIDViewThreeController.xib */,
+			);
+			name = "Third Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +308,17 @@
 				4BE3F8E117AA317A004A5DE9 /* ip.png in Resources */,
 				4B84CE6817AA3D6700DD70A3 /* image2.png in Resources */,
 				4B5A197417AA5FC00061F267 /* 11.png in Resources */,
+				4BF4173B17BA3A8800E5A970 /* back-icon.png in Resources */,
+				4BF4173C17BA3A8800E5A970 /* icon_.png in Resources */,
+				4BF4173D17BA3A8800E5A970 /* iconn.png in Resources */,
+				4BF4173E17BA3A8800E5A970 /* IMG_3255.JPG in Resources */,
+				4BF4173F17BA3A8800E5A970 /* IMG_3295.JPG in Resources */,
+				4BF4174017BA3A8800E5A970 /* P1110290.JPG in Resources */,
+				4BF4174117BA3A8800E5A970 /* SAM_0490.JPG in Resources */,
+				4BD8233C17BB549B00FAAA96 /* BIDViewTwo.xib in Resources */,
+				4BB69A8D17BB5D2800E287D6 /* BIDViewThreeController.xib in Resources */,
+				4BB69A9F17BB6A2600E287D6 /* iconskip.png in Resources */,
+				4BB69AA017BB6A2600E287D6 /* iconupload.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +333,12 @@
 				4BA4E80317A8E54E00BC07B8 /* BIDAppDelegate.m in Sources */,
 				4BA4E80C17A8E54E00BC07B8 /* BIDViewController.m in Sources */,
 				4BE3F8CD17AA01DF004A5DE9 /* BIDAddCell.m in Sources */,
+				4BD8233B17BB549B00FAAA96 /* BIDViewTwo.m in Sources */,
+				4BB69A8C17BB5D2800E287D6 /* BIDViewThreeController.m in Sources */,
+				4BB69A9017BB5E9600E287D6 /* BIDFirstCell.m in Sources */,
+				4BB69A9317BB5EEC00E287D6 /* BIDFirstTableViewController.m in Sources */,
+				4BB69A9617BB5FA100E287D6 /* BIDSecondTableViewController.m in Sources */,
+				4BB69A9917BB5FB700E287D6 /* BIDSecondCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +359,7 @@
 				4BA4E80E17A8E54E00BC07B8 /* en */,
 			);
 			name = BIDViewController.xib;
+			path = Exersice11;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

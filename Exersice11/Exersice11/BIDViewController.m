@@ -9,67 +9,69 @@
 #import "BIDViewController.h"
 #import "BIDAddCell.h"
 #import <QuartzCore/QuartzCore.h>
+#import "BIDViewTwo.h"
 @interface BIDViewController ()
 
 @end
 static NSString *Identifier=@"Identifier";
 BIDAddCell *cell;
 @implementation BIDViewController
-@synthesize tabBar,navigationBar;
 @synthesize txtSearch,viewScreen,btnAdd;
 @synthesize computer,tableView;
+@synthesize delegateInfo;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //Gesture cho Keybroad
-    UITapGestureRecognizer *keybroad=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeybroad:)];
-    [self.view addGestureRecognizer:(keybroad)];
+    
 	//Background cho man hinh chinh
-    self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"image2.png"]];
+    UIImage *img=[UIImage imageNamed:@"SAM_0490.JPG"];
+    self.view.backgroundColor=[UIColor colorWithPatternImage:[self imageWithImage:img scaledToSize:CGSizeMake([UIScreen mainScreen].applicationFrame.size.width,[UIScreen mainScreen].applicationFrame.size.height)]];
     
     //man hinh thu 2 chua cac view đuoc set Alpha
     viewScreen=[[UIView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].applicationFrame.size.width,[UIScreen mainScreen].applicationFrame.size.height)];
     viewScreen.backgroundColor=[UIColor colorWithWhite:1 alpha:0.2];
     
-    //NavigationBar
-    UIBarButtonItem *skipBtn = [[UIBarButtonItem alloc]initWithTitle:@"Skip" style:UIBarButtonItemStyleDone target:self action:@selector(skipClick:)];
-    navigationBar=[[UINavigationBar alloc ]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].applicationFrame.size.width, 44)];
-    navigationBar.delegate=self;
-    [navigationBar setTintColor:[UIColor colorWithWhite:0 alpha:0.1]];
-    UINavigationItem *firstItem=[[UINavigationItem alloc]init];
-    firstItem.rightBarButtonItem=skipBtn;
-    firstItem.leftBarButtonItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonItemStylePlain target:self action:@selector(backClick:)];
-    
-    firstItem.rightBarButtonItem.tintColor=[UIColor blueColor];
-    firstItem.leftBarButtonItem.tintColor=[UIColor blueColor];
-    [firstItem setTitle:@"Skip Image"];
-    [navigationBar pushNavigationItem:firstItem animated:YES];
-    
     //TextField 
     txtSearch=[[UITextField alloc]init];
     UIFont *b=[UIFont fontWithName:@"Helvetica" size:14];
-    txtSearch.frame=CGRectMake(10, navigationBar.frame.size.height+10, [UIScreen mainScreen].applicationFrame.size.width-20, 30);
-    txtSearch.backgroundColor=[UIColor whiteColor];
+    txtSearch.frame=CGRectMake(10, 10, [UIScreen mainScreen].applicationFrame.size.width-20, 30);
+    [txtSearch addTarget:self action:@selector(textChange:) forControlEvents:UIControlEventEditingChanged];
+    txtSearch.backgroundColor=[UIColor colorWithWhite:1 alpha:1];
     txtSearch.font=b;
     txtSearch.contentVerticalAlignment=UIControlContentVerticalAlignmentCenter;
     txtSearch.placeholder=@"Search";
     txtSearch.delegate=self;
-    
-    //Button add
-    btnAdd=[UIButton buttonWithType:UIButtonTypeContactAdd];
-    btnAdd.frame=CGRectMake(txtSearch.frame.size.width-txtSearch.frame.size.height, 0, txtSearch.frame.size.height, txtSearch.frame.size.height);
-    [self.txtSearch addSubview:btnAdd];
-    btnAdd.hidden=YES;
+    txtSearch.layer.cornerRadius=5;
+    txtSearch.clipsToBounds=YES;
+    txtSearch.layer.borderWidth=1;
+    txtSearch.layer.borderColor=[[UIColor grayColor]CGColor];
     
     //tableView
-    tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, navigationBar.frame.size.height+txtSearch.frame.size.height+20, [UIScreen mainScreen].applicationFrame.size.width, [UIScreen mainScreen].applicationFrame.size.height) style:UITableViewStylePlain];
+    tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 10, [UIScreen mainScreen].applicationFrame.size.width, [UIScreen mainScreen].applicationFrame.size.height) style:UITableViewStylePlain];
     tableView.delegate=self;
     tableView.dataSource=self;
     tableView.contentInset=UIEdgeInsetsMake(0, 0, 200, 0);
     tableView.backgroundColor=[UIColor clearColor];
     tableView.separatorColor=[UIColor clearColor];
     
-
+   //NavigationBar Controller
+    
+    UIImage* imageBarLeft = [UIImage imageNamed:@"back-icon.png"];
+    UIButton *leftButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 30)];
+    [leftButton setBackgroundImage:[self imageWithImage:imageBarLeft scaledToSize:CGSizeMake(40, 30)] forState:UIControlStateNormal];
+    UIBarButtonItem *leftBarButton =[[UIBarButtonItem alloc] initWithCustomView:leftButton];
+    [leftButton addTarget:self action:@selector(backClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIImage* imageBarRight = [UIImage imageNamed:@"iconskip.png"];
+    UIButton *rightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 30)];
+    [rightButton setBackgroundImage:[self imageWithImage:imageBarRight scaledToSize:CGSizeMake(50, 30)] forState:UIControlStateNormal];
+    UIBarButtonItem *rightBarButton =[[UIBarButtonItem alloc] initWithCustomView:rightButton];
+    [rightButton addTarget:self action:@selector(skipClick:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItem=leftBarButton;
+    self.navigationItem.rightBarButtonItem=rightBarButton;
+    self.navigationItem.title=@"First Screen";
+    
+    //load cell
     [tableView registerClass:[BIDAddCell class] forCellReuseIdentifier:Identifier];
     cell=[[BIDAddCell alloc]init];
     computer=@[@{@"image": @"1",@"label":@"Golden image nature"},
@@ -80,26 +82,37 @@ BIDAddCell *cell;
                @{@"image": @"6",@"label":@"Golden pound day"}];
     
     
-    
-    [viewScreen addSubview:navigationBar];
-    [viewScreen addSubview:txtSearch];
+    //Add Subview
     [viewScreen addSubview:tableView];
+    [viewScreen addSubview:txtSearch];
     [self.view addSubview:viewScreen];
-   
     
+}
+//Ve lai anh theo kich thuoc lua chon
+-(UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize {
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+//Xu ly khi click vao TextField
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+
+}
+//Xu ly khi ket thuc edit TextField
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+ 
 }
 
--(void)textFieldDidBeginEditing:(UITextField *)textField{
-    btnAdd.hidden=NO;
-}
--(void)textFieldDidEndEditing:(UITextField *)textField{
-    btnAdd.hidden=YES;
-}
+//Cac ham xu ly voi UITableView
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return [computer count];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 20;
+    if(section==0)
+    return 40;
+    else return 10;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -157,19 +170,33 @@ BIDAddCell *cell;
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 40;
 }
--(IBAction)hideKeybroad:(id)sender{
-    [self.view endEditing:YES];
-}
--(IBAction)skipClick:(id)sender{
+
+//Click vao cell trong UITableView
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    cell=(BIDAddCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    cell.selected=NO;
+    NSMutableArray *arrayInfo=[[NSMutableArray alloc]init];
+    [arrayInfo addObject:[cell.Label.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
+    [arrayInfo addObject:cell.subLabel.text];
+    [arrayInfo addObject:cell.subLabelInfo.text];
+    BIDViewTwo *two=[[BIDViewTwo alloc]initWithNibName:@"BIDViewTwo" bundle:[NSBundle mainBundle]];
+    //khai bao delegate khi truyen thong so tu Root toi View2
+    delegateInfo=two;
+    [delegateInfo info:arrayInfo];
+    [self.navigationController pushViewController:two animated:YES];
     
 }
+//Xu ly khi click vao button Skip
+-(IBAction)skipClick:(id)sender{
+}
+//Xu ly khi click vao button back
 -(IBAction)backClick:(id)sender{
     
 }
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 //Cac ham khi rotate man hinh
 -(NSUInteger)supportedInterfaceOrientations{
