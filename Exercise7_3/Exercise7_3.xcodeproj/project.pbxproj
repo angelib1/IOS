@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BCE603817BC6FDA0022D2DA /* icon7.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE603717BC6FDA0022D2DA /* icon7.png */; };
 		50E45E34174227E800D0B632 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E45E33174227E800D0B632 /* UIKit.framework */; };
 		50E45E36174227E800D0B632 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E45E35174227E800D0B632 /* Foundation.framework */; };
 		50E45E38174227E800D0B632 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E45E37174227E800D0B632 /* CoreGraphics.framework */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4BCE603717BC6FDA0022D2DA /* icon7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon7.png; path = ../icon7.png; sourceTree = "<group>"; };
 		50E45E30174227E800D0B632 /* Exercise7_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise7_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E45E33174227E800D0B632 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		50E45E35174227E800D0B632 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -44,8 +46,8 @@
 		50E45E56174227FB00D0B632 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		50E45E581742285F00D0B632 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomView.h; path = ../CustomView.h; sourceTree = "<group>"; };
 		50E45E591742285F00D0B632 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomView.m; path = ../CustomView.m; sourceTree = "<group>"; };
-		50E45E5B17422E4B00D0B632 /* icon_notification_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_notification_normal.png; sourceTree = "<group>"; };
-		50F0AB77174B07E2005B6C8E /* icon_notification_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_notification_large.png; sourceTree = "<group>"; };
+		50E45E5B17422E4B00D0B632 /* icon_notification_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_notification_normal.png; path = ../icon_notification_normal.png; sourceTree = "<group>"; };
+		50F0AB77174B07E2005B6C8E /* icon_notification_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_notification_large.png; path = ../icon_notification_large.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +68,6 @@
 		50E45E27174227E800D0B632 = {
 			isa = PBXGroup;
 			children = (
-				50F0AB77174B07E2005B6C8E /* icon_notification_large.png */,
-				50E45E5B17422E4B00D0B632 /* icon_notification_normal.png */,
 				50E45E39174227E800D0B632 /* Exercise7_3 */,
 				50E45E32174227E800D0B632 /* Frameworks */,
 				50E45E31174227E800D0B632 /* Products */,
@@ -111,6 +111,9 @@
 		50E45E3A174227E800D0B632 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4BCE603717BC6FDA0022D2DA /* icon7.png */,
+				50F0AB77174B07E2005B6C8E /* icon_notification_large.png */,
+				50E45E5B17422E4B00D0B632 /* icon_notification_normal.png */,
 				50E45E3B174227E800D0B632 /* Exercise7_3-Info.plist */,
 				50E45E3C174227E800D0B632 /* InfoPlist.strings */,
 				50E45E3F174227E800D0B632 /* main.m */,
@@ -181,6 +184,7 @@
 				50E45E50174227E800D0B632 /* BIDViewController.xib in Resources */,
 				50E45E5C17422E4B00D0B632 /* icon_notification_normal.png in Resources */,
 				50F0AB78174B07E2005B6C8E /* icon_notification_large.png in Resources */,
+				4BCE603817BC6FDA0022D2DA /* icon7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

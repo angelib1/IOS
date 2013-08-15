@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BCE603E17BC752C0022D2DA /* icon10.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE603D17BC752C0022D2DA /* icon10.png */; };
 		500614C017617196000FD0CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500614BF17617196000FD0CE /* UIKit.framework */; };
 		500614C217617196000FD0CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500614C117617196000FD0CE /* Foundation.framework */; };
 		500614C417617196000FD0CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500614C317617196000FD0CE /* CoreGraphics.framework */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4BCE603D17BC752C0022D2DA /* icon10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon10.png; path = ../icon10.png; sourceTree = "<group>"; };
 		500614BC17617196000FD0CE /* Exercise10_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise10_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		500614BF17617196000FD0CE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		500614C117617196000FD0CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -115,6 +117,7 @@
 		500614C617617196000FD0CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4BCE603D17BC752C0022D2DA /* icon10.png */,
 				500614E5176173E7000FD0CE /* image3.png */,
 				500614E6176173E7000FD0CE /* p1.png */,
 				500614E7176173E7000FD0CE /* p2.png */,
@@ -197,6 +200,7 @@
 				500614F0176173E7000FD0CE /* p4.png in Resources */,
 				500614F1176173E7000FD0CE /* p5.png in Resources */,
 				500614F2176173E7000FD0CE /* p6.png in Resources */,
+				4BCE603E17BC752C0022D2DA /* icon10.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +337,7 @@
 				500614E117617196000FD0CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

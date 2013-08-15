@@ -8,6 +8,7 @@
 
 #import "BIDSecondTableViewController.h"
 #import "BIDSecondCell.h"
+
 @interface BIDSecondTableViewController ()
 
 @end

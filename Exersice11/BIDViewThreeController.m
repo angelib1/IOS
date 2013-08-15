@@ -10,11 +10,14 @@
 #import <QuartzCore/QuartzCore.h>
 #import "BIDFirstTableViewController.h"
 #import "BIDSecondTableViewController.h"
+#import "BIDOffsetObjectToKeyboard.h"
+
 @interface BIDViewThreeController ()
 
 @end
 BIDFirstTableViewController *firstTableControll;
 BIDSecondTableViewController *secondTableControll;
+BIDOffsetObjectToKeyboard *offsetObjectForKeyboard;
 @implementation BIDViewThreeController
 @synthesize tabBar,navigationBar;
 @synthesize txtSearch,viewScreen,btnAdd;
@@ -105,12 +108,20 @@ BIDSecondTableViewController *secondTableControll;
     tableViewList=[[UITableView alloc]initWithFrame:CGRectMake(0, txtSearch.frame.origin.y, [UIScreen mainScreen].applicationFrame.size.width, [UIScreen mainScreen].applicationFrame.size.height) style:UITableViewStylePlain];
     tableViewList.delegate=secondTableControll;
     tableViewList.dataSource=secondTableControll;
-    //Content Inset
-    tableViewList.contentInset=UIEdgeInsetsMake(0, 0, 200, 0);
     tableViewList.backgroundColor=[UIColor clearColor];
     tableViewList.separatorColor=[UIColor clearColor];
     //[itemDisplay addObjectsFromArray:[computer copy]];
     secondTableControll.item=itemDisplay;
+    
+    
+    //Offset Object so voi Keyboard
+    offsetObjectForKeyboard=[[BIDOffsetObjectToKeyboard alloc]init];
+    offsetObjectForKeyboard.compareOffset=[itemChoice count]*32+20+[itemDisplay count]*47+35;
+    offsetObjectForKeyboard.txtText=txtSearch;
+    offsetObjectForKeyboard.tableView=tableViewList;
+    [offsetObjectForKeyboard registerForKeyboardNotifications];
+    
+    
     
     
     [viewScreen addSubview:navigationBar];
@@ -149,7 +160,7 @@ BIDSecondTableViewController *secondTableControll;
 }
 -(void)changeViewDel{
     tableViewChoice.frame=CGRectMake(0, 10, [UIScreen mainScreen].applicationFrame.size.width,( [itemChoice count]+1)*32);
-    txtSearch.frame=CGRectMake(10, tableViewChoice.frame.origin.y+tableViewChoice.frame.size.height+10+10, [UIScreen mainScreen].applicationFrame.size.width-20, 30);
+    txtSearch.frame=CGRectMake(10, txtSearch.frame.origin.y, [UIScreen mainScreen].applicationFrame.size.width-20, 30);
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.5];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
@@ -230,6 +241,7 @@ BIDSecondTableViewController *secondTableControll;
 
 //Xu ly su kien khi thay doi text trong TextField
 -(IBAction)textChange:(id)sender{
+   
     //[computer addObject:txtSearch.text];
     if(![txtSearch.text isEqualToString:@""])
     {
@@ -247,14 +259,18 @@ BIDSecondTableViewController *secondTableControll;
         [tableViewList reloadData];
     }
     else btnAdd.enabled=NO;
+    offsetObjectForKeyboard.compareOffset=([itemChoice count])*32+20+([itemDisplay count])*47+35;
+    [offsetObjectForKeyboard textChange];
 }
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
     btnAdd.hidden=NO;
     btnAdd.enabled=NO;
+    [offsetObjectForKeyboard textFieldDidBeginEditing];
     
 }
 -(void)textFieldDidEndEditing:(UITextField *)textField{
     btnAdd.hidden=YES;
+    [offsetObjectForKeyboard textFieldDidEndEditing];
 }
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [self.view endEditing:YES];

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BCE603417BC6F5A0022D2DA /* icon7.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE603317BC6F5A0022D2DA /* icon7.png */; };
 		5012C3E21739EC1F0017D4B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5012C3E11739EC1F0017D4B9 /* UIKit.framework */; };
 		5012C3E41739EC1F0017D4B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5012C3E31739EC1F0017D4B9 /* Foundation.framework */; };
 		5012C3E61739EC1F0017D4B9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5012C3E51739EC1F0017D4B9 /* CoreGraphics.framework */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4BCE603317BC6F5A0022D2DA /* icon7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon7.png; path = ../icon7.png; sourceTree = "<group>"; };
 		5012C3DE1739EC1F0017D4B9 /* Exercise7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5012C3E11739EC1F0017D4B9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5012C3E31739EC1F0017D4B9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -39,8 +41,8 @@
 		5012C3F91739EC1F0017D4B9 /* BIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDViewController.h; sourceTree = "<group>"; };
 		5012C3FA1739EC1F0017D4B9 /* BIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDViewController.m; sourceTree = "<group>"; };
 		5012C3FD1739EC1F0017D4B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BIDViewController.xib; sourceTree = "<group>"; };
-		50354B58173C83E50090019B /* icon_notification_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_notification_large.png; sourceTree = "<group>"; };
-		50354B59173C83E50090019B /* icon_notification_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_notification_normal.png; sourceTree = "<group>"; };
+		50354B58173C83E50090019B /* icon_notification_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_notification_large.png; path = ../icon_notification_large.png; sourceTree = "<group>"; };
+		50354B59173C83E50090019B /* icon_notification_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_notification_normal.png; path = ../icon_notification_normal.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +62,6 @@
 		5012C3D51739EC1F0017D4B9 = {
 			isa = PBXGroup;
 			children = (
-				50354B58173C83E50090019B /* icon_notification_large.png */,
-				50354B59173C83E50090019B /* icon_notification_normal.png */,
 				5012C3E71739EC1F0017D4B9 /* Exercise7 */,
 				5012C3E01739EC1F0017D4B9 /* Frameworks */,
 				5012C3DF1739EC1F0017D4B9 /* Products */,
@@ -102,6 +102,9 @@
 		5012C3E81739EC1F0017D4B9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4BCE603317BC6F5A0022D2DA /* icon7.png */,
+				50354B58173C83E50090019B /* icon_notification_large.png */,
+				50354B59173C83E50090019B /* icon_notification_normal.png */,
 				5012C3E91739EC1F0017D4B9 /* Exercise7-Info.plist */,
 				5012C3EA1739EC1F0017D4B9 /* InfoPlist.strings */,
 				5012C3ED1739EC1F0017D4B9 /* main.m */,
@@ -172,6 +175,7 @@
 				5012C3FE1739EC1F0017D4B9 /* BIDViewController.xib in Resources */,
 				50354B5A173C83E50090019B /* icon_notification_large.png in Resources */,
 				50354B5B173C83E50090019B /* icon_notification_normal.png in Resources */,
+				4BCE603417BC6F5A0022D2DA /* icon7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

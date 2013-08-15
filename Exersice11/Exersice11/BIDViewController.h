@@ -20,5 +20,6 @@
 @property (nonatomic, strong) id<DelegateInfo> delegateInfo;
 -(IBAction)skipClick:(id)sender;
 -(IBAction)backClick:(id)sender;
+-(IBAction)textChange:(id)sender;
 -(UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;
 @end

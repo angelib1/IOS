@@ -10,11 +10,15 @@
 #import "BIDAddCell.h"
 #import <QuartzCore/QuartzCore.h>
 #import "BIDViewTwo.h"
+#import "BIDOffsetObjectToKeyboard.h"
+
 @interface BIDViewController ()
 
 @end
 static NSString *Identifier=@"Identifier";
 BIDAddCell *cell;
+BIDOffsetObjectToKeyboard *offsetObjectForKeyboard;
+CGSize keyboard;
 @implementation BIDViewController
 @synthesize txtSearch,viewScreen,btnAdd;
 @synthesize computer,tableView;
@@ -22,7 +26,6 @@ BIDAddCell *cell;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 	//Background cho man hinh chinh
     UIImage *img=[UIImage imageNamed:@"SAM_0490.JPG"];
     self.view.backgroundColor=[UIColor colorWithPatternImage:[self imageWithImage:img scaledToSize:CGSizeMake([UIScreen mainScreen].applicationFrame.size.width,[UIScreen mainScreen].applicationFrame.size.height)]];
@@ -47,7 +50,7 @@ BIDAddCell *cell;
     txtSearch.layer.borderColor=[[UIColor grayColor]CGColor];
     
     //tableView
-    tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 10, [UIScreen mainScreen].applicationFrame.size.width, [UIScreen mainScreen].applicationFrame.size.height) style:UITableViewStylePlain];
+    tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].applicationFrame.size.width, [UIScreen mainScreen].applicationFrame.size.height) style:UITableViewStylePlain];
     tableView.delegate=self;
     tableView.dataSource=self;
     tableView.contentInset=UIEdgeInsetsMake(0, 0, 200, 0);
@@ -82,6 +85,12 @@ BIDAddCell *cell;
                @{@"image": @"6",@"label":@"Golden pound day"}];
     
     
+    //Offset Object so voi Keyboard
+    offsetObjectForKeyboard=[[BIDOffsetObjectToKeyboard alloc]init];
+    offsetObjectForKeyboard.compareOffset=40+(50*(tableView.numberOfSections+1));
+    offsetObjectForKeyboard.txtText=txtSearch;
+    offsetObjectForKeyboard.tableView=tableView;
+    [offsetObjectForKeyboard registerForKeyboardNotifications];
     //Add Subview
     [viewScreen addSubview:tableView];
     [viewScreen addSubview:txtSearch];
@@ -96,14 +105,6 @@ BIDAddCell *cell;
     UIGraphicsEndImageContext();
     return newImage;
 }
-//Xu ly khi click vao TextField
--(void)textFieldDidBeginEditing:(UITextField *)textField{
-
-}
-//Xu ly khi ket thuc edit TextField
--(void)textFieldDidEndEditing:(UITextField *)textField{
- 
-}
 
 //Cac ham xu ly voi UITableView
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -111,7 +112,7 @@ BIDAddCell *cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     if(section==0)
-    return 40;
+    return 50;
     else return 10;
 }
 
@@ -184,6 +185,7 @@ BIDAddCell *cell;
     delegateInfo=two;
     [delegateInfo info:arrayInfo];
     [self.navigationController pushViewController:two animated:YES];
+   
     
 }
 //Xu ly khi click vao button Skip
@@ -191,12 +193,26 @@ BIDAddCell *cell;
 }
 //Xu ly khi click vao button back
 -(IBAction)backClick:(id)sender{
-    
+
 }
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     
+}
+-(IBAction)textChange:(id)sender{
+    [offsetObjectForKeyboard textChange];
+}
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    [offsetObjectForKeyboard textFieldDidBeginEditing];
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    [offsetObjectForKeyboard textFieldDidEndEditing];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.view endEditing:YES];
+    return YES;
 }
 //Cac ham khi rotate man hinh
 -(NSUInteger)supportedInterfaceOrientations{

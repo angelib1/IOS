@@ -17,6 +17,7 @@
 		4B2388BE17B9EFB400443AF4 /* two.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B2388BD17B9EFB400443AF4 /* two.png */; };
 		4B41DDA317AFA366007BE152 /* BIDSecondTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B41DDA217AFA366007BE152 /* BIDSecondTableController.m */; };
 		4B41DDA617AFA38D007BE152 /* BIDFirstTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B41DDA517AFA38D007BE152 /* BIDFirstTableController.m */; };
+		4BCE602A17BC6B780022D2DA /* icon11.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE602917BC6B780022D2DA /* icon11.png */; };
 		4BD7E7BD17B0D9900070F11B /* BIDAddCellFirstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7E7BC17B0D9900070F11B /* BIDAddCellFirstCell.m */; };
 		4BEE1C0717AF780C00FD8DFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BEE1C0617AF780C00FD8DFF /* UIKit.framework */; };
 		4BEE1C0917AF780C00FD8DFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BEE1C0817AF780C00FD8DFF /* Foundation.framework */; };
@@ -54,6 +55,7 @@
 		4B41DDA217AFA366007BE152 /* BIDSecondTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BIDSecondTableController.m; path = ../BIDSecondTableController.m; sourceTree = "<group>"; };
 		4B41DDA417AFA38D007BE152 /* BIDFirstTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BIDFirstTableController.h; path = ../BIDFirstTableController.h; sourceTree = "<group>"; };
 		4B41DDA517AFA38D007BE152 /* BIDFirstTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BIDFirstTableController.m; path = ../BIDFirstTableController.m; sourceTree = "<group>"; };
+		4BCE602917BC6B780022D2DA /* icon11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon11.png; path = ../icon11.png; sourceTree = "<group>"; };
 		4BD7E7BB17B0D9900070F11B /* BIDAddCellFirstCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BIDAddCellFirstCell.h; path = ../BIDAddCellFirstCell.h; sourceTree = "<group>"; };
 		4BD7E7BC17B0D9900070F11B /* BIDAddCellFirstCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BIDAddCellFirstCell.m; path = ../BIDAddCellFirstCell.m; sourceTree = "<group>"; };
 		4BEE1C0317AF780C00FD8DFF /* Exercise11_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise11_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +155,7 @@
 		4BEE1C0D17AF780C00FD8DFF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4BCE602917BC6B780022D2DA /* icon11.png */,
 				4BF4172F17BA1AFD00E5A970 /* iconn.png */,
 				4B03C5F317BA12CA00F64D90 /* icon.png */,
 				4B03C5F117BA0F9400F64D90 /* back-icon.png */,
@@ -253,6 +256,7 @@
 				4B03C5F217BA0F9400F64D90 /* back-icon.png in Resources */,
 				4B03C5F417BA12CA00F64D90 /* icon.png in Resources */,
 				4BF4173017BA1AFD00E5A970 /* iconn.png in Resources */,
+				4BCE602A17BC6B780022D2DA /* icon11.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BCE603617BC6F9A0022D2DA /* icon7.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE603517BC6F9A0022D2DA /* icon7.png */; };
 		508B2237173CA76300D4B40F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508B2236173CA76300D4B40F /* UIKit.framework */; };
 		508B2239173CA76300D4B40F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508B2238173CA76300D4B40F /* Foundation.framework */; };
 		508B223B173CA76300D4B40F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508B223A173CA76300D4B40F /* CoreGraphics.framework */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4BCE603517BC6F9A0022D2DA /* icon7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon7.png; path = ../icon7.png; sourceTree = "<group>"; };
 		508B2233173CA76300D4B40F /* Exercise7_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise7_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		508B2236173CA76300D4B40F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		508B2238173CA76300D4B40F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -45,7 +47,7 @@
 		508B225A173CA7A900D4B40F /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomView.m; path = ../CustomView.m; sourceTree = "<group>"; };
 		50E45DEE1741D88400D0B632 /* text.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.txt; sourceTree = "<group>"; };
 		50E45E251742277D00D0B632 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		50E45E5D17423AC000D0B632 /* icon_notification_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_notification_normal.png; sourceTree = "<group>"; };
+		50E45E5D17423AC000D0B632 /* icon_notification_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_notification_normal.png; path = ../icon_notification_normal.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +68,6 @@
 		508B222A173CA76200D4B40F = {
 			isa = PBXGroup;
 			children = (
-				50E45E5D17423AC000D0B632 /* icon_notification_normal.png */,
 				508B223C173CA76300D4B40F /* Exercise7_2 */,
 				508B2235173CA76300D4B40F /* Frameworks */,
 				508B2234173CA76300D4B40F /* Products */,
@@ -111,6 +112,8 @@
 		508B223D173CA76300D4B40F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4BCE603517BC6F9A0022D2DA /* icon7.png */,
+				50E45E5D17423AC000D0B632 /* icon_notification_normal.png */,
 				508B223E173CA76300D4B40F /* Exercise7_2-Info.plist */,
 				508B223F173CA76300D4B40F /* InfoPlist.strings */,
 				508B2242173CA76300D4B40F /* main.m */,
@@ -181,6 +184,7 @@
 				508B2253173CA76300D4B40F /* BIDViewController.xib in Resources */,
 				50E45DEF1741D88400D0B632 /* text.txt in Resources */,
 				50E45E5E17423AC000D0B632 /* icon_notification_normal.png in Resources */,
+				4BCE603617BC6F9A0022D2DA /* icon7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

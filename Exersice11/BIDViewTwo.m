@@ -75,7 +75,7 @@ BIDViewController *first;
     txtSearch.clipsToBounds=YES;
     txtSearch.layer.borderWidth=1;
     txtSearch.layer.borderColor=[[UIColor grayColor]CGColor];
-    [txtSearch setEnabled:NO];
+    
     
     //Button add
     btnAdd=[UIButton buttonWithType:UIButtonTypeContactAdd];
@@ -107,9 +107,16 @@ BIDViewController *first;
     }
     txtSearch.placeholder=tag;
 }
+//Xu ly khi click vao TextField
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    [self.view endEditing:YES];
+    [self.navigationController pushViewController:three animated:YES];
+}
+
 //Xu ly khi click vao Button back
 -(IBAction)backClick:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
+    
 }
 //Xu ly khi click vao Button Add
 -(IBAction)nextClick:(id)sender{

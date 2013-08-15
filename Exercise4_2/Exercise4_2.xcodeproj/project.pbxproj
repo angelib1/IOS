@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BCE603017BC6EC00022D2DA /* icon4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE602F17BC6EC00022D2DA /* icon4.png */; };
 		50AAEB761739997E00DD26CC /* AddCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AAEB751739997E00DD26CC /* AddCell.m */; };
 		50AAEB781739999100DD26CC /* AddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50AAEB771739999100DD26CC /* AddCell.xib */; };
 		50ED92961738931D000770B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ED92951738931D000770B2 /* UIKit.framework */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4BCE602F17BC6EC00022D2DA /* icon4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon4.png; path = ../icon4.png; sourceTree = "<group>"; };
 		50AAEB741739997E00DD26CC /* AddCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCell.h; sourceTree = "<group>"; };
 		50AAEB751739997E00DD26CC /* AddCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCell.m; sourceTree = "<group>"; };
 		50AAEB771739999100DD26CC /* AddCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCell.xib; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		50ED929C1738931D000770B2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4BCE602F17BC6EC00022D2DA /* icon4.png */,
 				50ED929D1738931D000770B2 /* Exercise4_2-Info.plist */,
 				50ED929E1738931D000770B2 /* InfoPlist.strings */,
 				50ED92A11738931D000770B2 /* main.m */,
@@ -177,6 +180,7 @@
 				50ED92AC1738931D000770B2 /* Default-568h@2x.png in Resources */,
 				50ED92B21738931D000770B2 /* ViewController.xib in Resources */,
 				50AAEB781739999100DD26CC /* AddCell.xib in Resources */,
+				4BCE603017BC6EC00022D2DA /* icon4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

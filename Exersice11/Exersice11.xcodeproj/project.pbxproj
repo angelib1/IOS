@@ -33,6 +33,7 @@
 		4BB69A9917BB5FB700E287D6 /* BIDSecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB69A9817BB5FB700E287D6 /* BIDSecondCell.m */; };
 		4BB69A9F17BB6A2600E287D6 /* iconskip.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BB69A9D17BB6A2600E287D6 /* iconskip.png */; };
 		4BB69AA017BB6A2600E287D6 /* iconupload.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BB69A9E17BB6A2600E287D6 /* iconupload.png */; };
+		4BCE604717BCBC3B0022D2DA /* BIDOffsetObjectToKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE604617BCBC3B0022D2DA /* BIDOffsetObjectToKeyboard.m */; };
 		4BD8233B17BB549B00FAAA96 /* BIDViewTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD8233917BB549B00FAAA96 /* BIDViewTwo.m */; };
 		4BD8233C17BB549B00FAAA96 /* BIDViewTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BD8233A17BB549B00FAAA96 /* BIDViewTwo.xib */; };
 		4BE3F8CD17AA01DF004A5DE9 /* BIDAddCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE3F8CC17AA01DF004A5DE9 /* BIDAddCell.m */; };
@@ -88,6 +89,8 @@
 		4BB69A9817BB5FB700E287D6 /* BIDSecondCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDSecondCell.m; sourceTree = "<group>"; };
 		4BB69A9D17BB6A2600E287D6 /* iconskip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconskip.png; path = ../iconskip.png; sourceTree = "<group>"; };
 		4BB69A9E17BB6A2600E287D6 /* iconupload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconupload.png; path = ../iconupload.png; sourceTree = "<group>"; };
+		4BCE604517BCBC3B0022D2DA /* BIDOffsetObjectToKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDOffsetObjectToKeyboard.h; sourceTree = "<group>"; };
+		4BCE604617BCBC3B0022D2DA /* BIDOffsetObjectToKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDOffsetObjectToKeyboard.m; sourceTree = "<group>"; };
 		4BD8233817BB549B00FAAA96 /* BIDViewTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDViewTwo.h; sourceTree = "<group>"; };
 		4BD8233917BB549B00FAAA96 /* BIDViewTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDViewTwo.m; sourceTree = "<group>"; };
 		4BD8233A17BB549B00FAAA96 /* BIDViewTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BIDViewTwo.xib; sourceTree = "<group>"; };
@@ -125,6 +128,7 @@
 		4BA4E7E617A8E54E00BC07B8 = {
 			isa = PBXGroup;
 			children = (
+				4BCE604417BC8AC40022D2DA /* Keyboard */,
 				4BA4E7F817A8E54E00BC07B8 /* Exersice11 */,
 				4BB69A9A17BB672000E287D6 /* First Screen */,
 				4BA4E7F117A8E54E00BC07B8 /* Frameworks */,
@@ -238,6 +242,15 @@
 			name = "Third Screen";
 			sourceTree = "<group>";
 		};
+		4BCE604417BC8AC40022D2DA /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4BCE604517BCBC3B0022D2DA /* BIDOffsetObjectToKeyboard.h */,
+				4BCE604617BCBC3B0022D2DA /* BIDOffsetObjectToKeyboard.m */,
+			);
+			name = Keyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,6 +352,7 @@
 				4BB69A9317BB5EEC00E287D6 /* BIDFirstTableViewController.m in Sources */,
 				4BB69A9617BB5FA100E287D6 /* BIDSecondTableViewController.m in Sources */,
 				4BB69A9917BB5FB700E287D6 /* BIDSecondCell.m in Sources */,
+				4BCE604717BCBC3B0022D2DA /* BIDOffsetObjectToKeyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

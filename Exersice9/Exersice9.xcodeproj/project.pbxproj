@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BCE603C17BC70840022D2DA /* icon9.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE603B17BC70840022D2DA /* icon9.png */; };
 		50B4CDAE174CBAC200E205B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B4CDAD174CBAC100E205B7 /* UIKit.framework */; };
 		50B4CDB0174CBAC200E205B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B4CDAF174CBAC200E205B7 /* Foundation.framework */; };
 		50B4CDB2174CBAC200E205B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B4CDB1174CBAC200E205B7 /* CoreGraphics.framework */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4BCE603B17BC70840022D2DA /* icon9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon9.png; path = ../icon9.png; sourceTree = "<group>"; };
 		50B4CDAA174CBAC100E205B7 /* Exersice9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exersice9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B4CDAD174CBAC100E205B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		50B4CDAF174CBAC200E205B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -110,6 +112,7 @@
 		50B4CDB4174CBAC200E205B7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4BCE603B17BC70840022D2DA /* icon9.png */,
 				50B4CDB5174CBAC200E205B7 /* Exersice9-Info.plist */,
 				50B4CDB6174CBAC200E205B7 /* InfoPlist.strings */,
 				50B4CDB9174CBAC200E205B7 /* main.m */,
@@ -184,6 +187,7 @@
 				50E7DDE4175D881900EC9513 /* CameraFloating@2x.png in Resources */,
 				50E7DDE5175D881900EC9513 /* icon_you.png in Resources */,
 				50E7DDE6175D881900EC9513 /* icon_you@2x.png in Resources */,
+				4BCE603C17BC70840022D2DA /* icon9.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
