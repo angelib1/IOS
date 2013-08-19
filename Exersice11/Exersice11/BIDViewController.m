@@ -53,7 +53,6 @@ CGSize keyboard;
     tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].applicationFrame.size.width, [UIScreen mainScreen].applicationFrame.size.height) style:UITableViewStylePlain];
     tableView.delegate=self;
     tableView.dataSource=self;
-    tableView.contentInset=UIEdgeInsetsMake(0, 0, 200, 0);
     tableView.backgroundColor=[UIColor clearColor];
     tableView.separatorColor=[UIColor clearColor];
     
@@ -87,7 +86,7 @@ CGSize keyboard;
     
     //Offset Object so voi Keyboard
     offsetObjectForKeyboard=[[BIDOffsetObjectToKeyboard alloc]init];
-    offsetObjectForKeyboard.compareOffset=40+(50*(tableView.numberOfSections+1));
+    offsetObjectForKeyboard.compareOffset=50;
     offsetObjectForKeyboard.txtText=txtSearch;
     offsetObjectForKeyboard.tableView=tableView;
     [offsetObjectForKeyboard registerForKeyboardNotifications];
@@ -195,23 +194,22 @@ CGSize keyboard;
 -(IBAction)backClick:(id)sender{
 
 }
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    
-}
+//Xu ly khi Edit Text trong TextField
 -(IBAction)textChange:(id)sender{
     [offsetObjectForKeyboard textChange];
 }
+//Xu li khi click chuot vao TextField
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
     [offsetObjectForKeyboard textFieldDidBeginEditing];
 }
+//Xu ly khi ket thuc edit TextField
 -(void)textFieldDidEndEditing:(UITextField *)textField{
     [offsetObjectForKeyboard textFieldDidEndEditing];
 }
-
+//Xu ly khi Return ban phim
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [self.view endEditing:YES];
+    [offsetObjectForKeyboard shouldReturn];
     return YES;
 }
 //Cac ham khi rotate man hinh
@@ -223,5 +221,10 @@ CGSize keyboard;
 }
 -(BOOL)shouldAutorotate{
     return YES;
+}
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    
 }
 @end

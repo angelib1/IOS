@@ -104,26 +104,23 @@ BIDOffsetObjectToKeyboard *offsetObjectForKeyboard;
     btnAdd.hidden=YES;
     
     //tableViewList
-    //tableViewList=[[UITableView alloc]initWithFrame:CGRectMake(0, txtSearch.frame.origin.y+txtSearch.frame.size.height+20, [UIScreen mainScreen].applicationFrame.size.width, [UIScreen mainScreen].applicationFrame.size.height) style:UITableViewStylePlain];
     tableViewList=[[UITableView alloc]initWithFrame:CGRectMake(0, txtSearch.frame.origin.y, [UIScreen mainScreen].applicationFrame.size.width, [UIScreen mainScreen].applicationFrame.size.height) style:UITableViewStylePlain];
     tableViewList.delegate=secondTableControll;
     tableViewList.dataSource=secondTableControll;
     tableViewList.backgroundColor=[UIColor clearColor];
     tableViewList.separatorColor=[UIColor clearColor];
-    //[itemDisplay addObjectsFromArray:[computer copy]];
     secondTableControll.item=itemDisplay;
-    
     
     //Offset Object so voi Keyboard
     offsetObjectForKeyboard=[[BIDOffsetObjectToKeyboard alloc]init];
-    offsetObjectForKeyboard.compareOffset=[itemChoice count]*32+20+[itemDisplay count]*47+35;
+    if([itemChoice count]==0)
+    offsetObjectForKeyboard.compareOffset=57+[itemChoice count]*32;
+    else offsetObjectForKeyboard.compareOffset=57+[itemChoice count]*32 +10;
     offsetObjectForKeyboard.txtText=txtSearch;
     offsetObjectForKeyboard.tableView=tableViewList;
     [offsetObjectForKeyboard registerForKeyboardNotifications];
     
-    
-    
-    
+    //Add SubView
     [viewScreen addSubview:navigationBar];
     [viewScreen addSubview:tableViewList];
     [viewScreen addSubview:tableViewChoice];
@@ -236,7 +233,6 @@ BIDOffsetObjectToKeyboard *offsetObjectForKeyboard;
         [self.view endEditing:YES];
     }
     txtSearch.text=@"";
-    
 }
 
 //Xu ly su kien khi thay doi text trong TextField
@@ -259,30 +255,35 @@ BIDOffsetObjectToKeyboard *offsetObjectForKeyboard;
         [tableViewList reloadData];
     }
     else btnAdd.enabled=NO;
-    offsetObjectForKeyboard.compareOffset=([itemChoice count])*32+20+([itemDisplay count])*47+35;
+    if([itemChoice count]==0)
+        offsetObjectForKeyboard.compareOffset=57+[itemChoice count]*32;
+    else offsetObjectForKeyboard.compareOffset=57+[itemChoice count]*32 +10;
     [offsetObjectForKeyboard textChange];
 }
+//Xu ly khi click chuot vao TextField
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
     btnAdd.hidden=NO;
     btnAdd.enabled=NO;
     [offsetObjectForKeyboard textFieldDidBeginEditing];
     
 }
+//Xu ly khi ket thuc edit TextField
 -(void)textFieldDidEndEditing:(UITextField *)textField{
     btnAdd.hidden=YES;
     [offsetObjectForKeyboard textFieldDidEndEditing];
 }
+//Xu ly khi return ban phim
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [self.view endEditing:YES];
+    [offsetObjectForKeyboard shouldReturn];
     return YES;
 }
--(IBAction)hideKeybroad:(id)sender{
-    [self.view endEditing:YES];
-}
+//Xu ly khi click vao button click
 -(IBAction)nextClick:(id)sender{
     [delegateTag transferData:itemChoice];
     [self.navigationController popViewControllerAnimated:YES];
 }
+//Xu ly khi click button Back
 -(IBAction)backClick:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -301,6 +302,4 @@ BIDOffsetObjectToKeyboard *offsetObjectForKeyboard;
 -(BOOL)shouldAutorotate{
     return YES;
 }
-
-
 @end

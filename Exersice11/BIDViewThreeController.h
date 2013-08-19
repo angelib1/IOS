@@ -27,7 +27,6 @@
 @property (nonatomic, strong) UIButton *btnAdd;
 -(IBAction)nextClick:(id)sender;
 -(IBAction)backClick:(id)sender;
--(IBAction)hideKeybroad:(id)sender;
 -(IBAction)textChange:(id)sender;
 -(IBAction)ChoiceItem:(id)sender;
 -(void)changeView;
