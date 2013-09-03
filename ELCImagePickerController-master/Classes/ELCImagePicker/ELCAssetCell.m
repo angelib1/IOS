@@ -67,9 +67,12 @@ CLLocationCoordinate2D location;
         } else {
             UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageWithCGImage:asset.asset.thumbnail]];
             [_imageViewArray addObject:imageView];
+            NSData *imageData = [[NSData alloc] initWithData:UIImageJPEGRepresentation((imageView.image), 0.5)];
+            
+            int imageSize = imageData.length;
+            NSLog(@"SIZE OF IMAGE: %i ", imageSize);
         }
-        
-        if (i < [_overlayViewArray count]) {
+               if (i < [_overlayViewArray count]) {
             UIImageView *overlayView = [_overlayViewArray objectAtIndex:i];
             overlayView.hidden = asset.selected ? NO : YES;
         } else {
