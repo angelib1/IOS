@@ -13,4 +13,5 @@
 @property (nonatomic, strong) UIImageView *Image2;
 @property (nonatomic, strong) UIImageView *Image3;
 @property (nonatomic, strong) UIButton *btn1;
+@property (nonatomic) CGFloat sizeImage;
 @end

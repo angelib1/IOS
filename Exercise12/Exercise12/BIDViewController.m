@@ -13,7 +13,16 @@
 #import "BIDViewFour.h"
 #import "BIDViewFive.h"
 #import <QuartzCore/QuartzCore.h>
-
+#define HEIGHT_VIEW_FIRST 106
+#define HEIGHT_VIEW 150
+#define HEIGHT_VIEW_LAST 410
+#define WIDTH_VIEW 320
+#define WIDTH_IMAGE 100
+#define WIDTH_TEXT 120
+#define WIDTH_BUTTON 150
+#define HEIGHT_BUTTON_BIG 40
+#define HEIGHT_BUTTON_SMALL 30
+#define HEIGHT_BUTTON_SMALLER 20
 @interface BIDViewController ()
 
 @end
@@ -30,17 +39,17 @@ BIDViewFive *viewFive;
 	
     //navigationController
     UIImage* imageBarLeft = [UIImage imageNamed:@"menu.png"];
-    UIButton *leftButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-    [leftButton setBackgroundImage:[self imageWithImage:imageBarLeft scaledToSize:CGSizeMake(30, 30)] forState:UIControlStateNormal];
+    UIButton *leftButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, HEIGHT_BUTTON_SMALL, HEIGHT_BUTTON_SMALL)];
+    [leftButton setBackgroundImage:[self imageWithImage:imageBarLeft scaledToSize:CGSizeMake(HEIGHT_BUTTON_SMALL, HEIGHT_BUTTON_SMALL)] forState:UIControlStateNormal];
     UIBarButtonItem *leftBarButton =[[UIBarButtonItem alloc] initWithCustomView:leftButton];
     [leftButton addTarget:self action:@selector(menuClick) forControlEvents:UIControlEventTouchUpInside];
     
     UIImage* imageBarRight = [UIImage imageNamed:@"setting.png"];
-    UIButton *rightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-    [rightButton setBackgroundImage:[self imageWithImage:imageBarRight scaledToSize:CGSizeMake(30, 30)] forState:UIControlStateNormal];
+    UIButton *rightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, HEIGHT_BUTTON_SMALL, HEIGHT_BUTTON_SMALL)];
+    [rightButton setBackgroundImage:[self imageWithImage:imageBarRight scaledToSize:CGSizeMake(HEIGHT_BUTTON_SMALL, HEIGHT_BUTTON_SMALL)] forState:UIControlStateNormal];
     UIBarButtonItem *rightBarButton =[[UIBarButtonItem alloc] initWithCustomView:rightButton];
     [rightButton addTarget:self action:@selector(settingClick) forControlEvents:UIControlEventTouchUpInside];
-    UILabel *lblTitle=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 30)];
+    UILabel *lblTitle=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, HEIGHT_BUTTON_SMALL)];
     lblTitle.text=@"HOME";
     lblTitle.textAlignment=NSTextAlignmentCenter;
     lblTitle.textColor=[UIColor blackColor];
@@ -68,51 +77,74 @@ BIDViewFive *viewFive;
     
     //View 1
     viewOne=[[BIDViewOne alloc]init];
-    viewOne.frame=CGRectMake(5, 0,[UIScreen mainScreen].applicationFrame.size.width-10,100);
+    viewOne.frame=CGRectMake(0, 0,[UIScreen mainScreen].applicationFrame.size.width,HEIGHT_VIEW_FIRST);
     [viewOne.btn1 addTarget:self action:@selector(view1_Click) forControlEvents:UIControlEventTouchUpInside];
+    viewOne.layer.borderWidth=2;
+    viewOne.layer.cornerRadius=7;
+    viewOne.clipsToBounds=YES;
+    viewOne.layer.borderColor=[[UIColor whiteColor]CGColor];
     [arrayView1 addObject:viewOne];
-    viewOne.layer.cornerRadius=2;
-    viewOne.layer.borderWidth=1;
-    viewOne.layer.borderColor=[[UIColor lightGrayColor]CGColor];
     
     //View 2
     viewTwo=[[BIDViewTwo alloc]init];
-    viewTwo.frame=CGRectMake(5, viewOne.frame.origin.y+viewOne.frame.size.height, [UIScreen mainScreen].applicationFrame.size.width-10, 130);
+    viewTwo.frame=CGRectMake(0, viewOne.frame.origin.y+viewOne.frame.size.height, [UIScreen mainScreen].applicationFrame.size.width, HEIGHT_VIEW);
     [viewTwo.btn1 addTarget:self action:@selector(view2_Click) forControlEvents:UIControlEventTouchUpInside];
+    [viewTwo.btn addTarget:self action:@selector(view2_InfoClick) forControlEvents:UIControlEventTouchUpInside];
+    [viewTwo.btn2 addTarget:self action:@selector(view2_btn2Click) forControlEvents:UIControlEventTouchUpInside];
+    [viewTwo.btn3 addTarget:self action:@selector(view2_btn3Click) forControlEvents:UIControlEventTouchUpInside];
+    viewTwo.layer.borderWidth=2;
+    viewTwo.layer.cornerRadius=7;
+    viewTwo.clipsToBounds=YES;
+    viewTwo.layer.borderColor=[[UIColor whiteColor]CGColor];
     [arrayView1 addObject:viewTwo];
     [arrayView2 addObject:viewTwo];
-    viewTwo.layer.cornerRadius=2;
+    
     //View 3
     viewThree=[[BIDViewThree alloc]init];
-    viewThree.frame=CGRectMake(5, viewTwo.frame.origin.y+viewTwo.frame.size.height, [UIScreen mainScreen].applicationFrame.size.width-10, 130);
+    viewThree.frame=CGRectMake(0, viewTwo.frame.origin.y+viewTwo.frame.size.height, [UIScreen mainScreen].applicationFrame.size.width, HEIGHT_VIEW);
     [viewThree.btn1 addTarget:self action:@selector(view3_Click) forControlEvents:UIControlEventTouchUpInside];
+    [viewThree.btn2 addTarget:self action:@selector(view3_btn2Click) forControlEvents:UIControlEventTouchUpInside];
+    viewThree.layer.borderWidth=2;
+    viewThree.layer.cornerRadius=7;
+    viewThree.clipsToBounds=YES;
+    viewThree.layer.borderColor=[[UIColor whiteColor]CGColor];
     [arrayView1 addObject:viewThree];
     [arrayView2 addObject:viewThree];
     [arrayView3 addObject:viewThree];
-    viewThree.layer.cornerRadius=2;
+    
     
     //View 4
     viewFour=[[BIDViewFour alloc]init];
-    viewFour.frame=CGRectMake(5, viewThree.frame.origin.y+viewThree.frame.size.height, [UIScreen mainScreen].applicationFrame.size.width-10, 130);
+    viewFour.frame=CGRectMake(0, viewThree.frame.origin.y+viewThree.frame.size.height, [UIScreen mainScreen].applicationFrame.size.width, HEIGHT_VIEW);
     [viewFour.btn addTarget:self action:@selector(view4_Click) forControlEvents:UIControlEventTouchUpInside];
+    [viewFour.btn1 addTarget:self action:@selector(view4_btn1Click) forControlEvents:UIControlEventTouchUpInside];
+    viewFour.layer.borderWidth=2;
+    viewFour.layer.cornerRadius=7;
+    viewFour.clipsToBounds=YES;
+    viewFour.layer.borderColor=[[UIColor whiteColor]CGColor];
+    viewFour.tableView.scrollsToTop=NO;
     [arrayView1 addObject:viewFour];
     [arrayView2 addObject:viewFour];
     [arrayView3 addObject:viewFour];
     [arrayView4 addObject:viewFour];
-    viewFour.layer.cornerRadius=2;
+    
     
     //View 5
     viewFive=[[BIDViewFive alloc]init];
-    viewFive.frame=CGRectMake(5, viewFour.frame.origin.y+viewFour.frame.size.height, [UIScreen mainScreen].applicationFrame.size.width-10, 300);
+    viewFive.frame=CGRectMake(0, viewFour.frame.origin.y+viewFour.frame.size.height, [UIScreen mainScreen].applicationFrame.size.width, HEIGHT_VIEW_LAST);
     [viewFive.btn addTarget:self action:@selector(view5_Click) forControlEvents:UIControlEventTouchUpInside];
+    viewFive.layer.borderWidth=2;
+    viewFive.layer.cornerRadius=7;
+    viewFive.clipsToBounds=YES;
+    viewFive.layer.borderColor=[[UIColor whiteColor]CGColor];
     [arrayView1 addObject:viewFive];
     [arrayView2 addObject:viewFive];
     [arrayView3 addObject:viewFive];
     [arrayView4 addObject:viewFive];
-    viewFive.layer.cornerRadius=2;
+    
     
     //self.view
-    scrollView.contentSize = CGSizeMake(320, viewFive.frame.origin.y+viewFive.frame.size.height+100);
+    scrollView.contentSize = CGSizeMake(WIDTH_VIEW, viewFive.frame.origin.y+viewFive.frame.size.height+50);
     [scrollView addSubview:viewOne];
     [scrollView addSubview:viewTwo];
     [scrollView addSubview:viewThree];
@@ -142,7 +174,7 @@ BIDViewFive *viewFive;
         [UIView setAnimationDuration:0.4];
         [UIView setAnimationDelegate:self];
         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-        viewOne.btn1.frame=CGRectMake(0, 0, [UIScreen mainScreen].applicationFrame.size.width-10, 30);
+        viewOne.btn1.frame=CGRectMake(0, 0, [UIScreen mainScreen].applicationFrame.size.width, HEIGHT_BUTTON_BIG);
       [UIView commitAnimations];
         
     }
@@ -153,11 +185,11 @@ BIDViewFive *viewFive;
         [UIView setAnimationDuration:0.4];
         [UIView setAnimationDelegate:self];
         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-        viewOne.btn1.frame=CGRectMake(80, 30,150, 30);
+        viewOne.btn1.frame=CGRectMake((320-WIDTH_BUTTON)/2,HEIGHT_VIEW_FIRST/2-HEIGHT_BUTTON_BIG/2,WIDTH_BUTTON, HEIGHT_BUTTON_BIG);
         [UIView commitAnimations];
         
     }
-    scrollView.contentSize = CGSizeMake(320, viewFive.frame.origin.y+viewFive.frame.size.height+100);
+    scrollView.contentSize = CGSizeMake(WIDTH_VIEW, viewFive.frame.origin.y+viewFive.frame.size.height+50);
 }
 -(void)view2_Click{
     if(viewTwo.frame.size.height>80){
@@ -166,7 +198,16 @@ BIDViewFive *viewFive;
     else{
         [self changeViewDrop:arrayView2];        
     }
-    scrollView.contentSize = CGSizeMake(320, viewFive.frame.origin.y+viewFive.frame.size.height+100);
+    scrollView.contentSize = CGSizeMake(WIDTH_VIEW, viewFive.frame.origin.y+viewFive.frame.size.height+50);
+}
+-(void)view2_InfoClick{
+    
+}
+-(void)view2_btn2Click{
+    
+}
+-(void)view2_btn3Click{
+    
 }
 -(void)view3_Click{
     if(viewThree.frame.size.height>80){
@@ -175,7 +216,10 @@ BIDViewFive *viewFive;
     else{
         [self changeViewDrop:arrayView3];
             }
-    scrollView.contentSize = CGSizeMake(320, viewFive.frame.origin.y+viewFive.frame.size.height+100);
+    scrollView.contentSize = CGSizeMake(WIDTH_VIEW, viewFive.frame.origin.y+viewFive.frame.size.height+50);
+}
+-(void)view3_btn2Click{
+    
 }
 -(void)view4_Click{
     if(viewFour.frame.size.height>80){
@@ -184,10 +228,13 @@ BIDViewFive *viewFive;
     else{
          [self changeViewDrop:arrayView4];
     }
-    scrollView.contentSize = CGSizeMake(320, viewFive.frame.origin.y+viewFive.frame.size.height+100);
+    scrollView.contentSize = CGSizeMake(WIDTH_VIEW, viewFive.frame.origin.y+viewFive.frame.size.height+50);
 }
-
+-(void)view4_btn1Click{
+    
+}
 -(void)view5_Click{
+    //[self animateView];
 }
 //cuon
 -(void)changeViewRoll:(NSMutableArray *)arrayView{
@@ -216,15 +263,34 @@ BIDViewFive *viewFive;
         }
 
         if(i==0){
-            subview.frame=CGRectMake(5, previousView.frame.origin.y+previousView.frame.size.height, [UIScreen mainScreen].applicationFrame.size.width-10, 30);
+            if(previousView.frame.size.height>80){
+                subview.frame=CGRectMake(0, previousView.frame.origin.y+previousView.frame.size.height, [UIScreen mainScreen].applicationFrame.size.width, HEIGHT_BUTTON_BIG);
+            }else{
+                if (subview==viewOne){
+                    subview.frame=CGRectMake(0, previousView.frame.origin.y+previousView.frame.size.height, [UIScreen mainScreen].applicationFrame.size.width,HEIGHT_BUTTON_BIG);
+                }
+                else
+                 subview.frame=CGRectMake(0, previousView.frame.origin.y+previousView.frame.size.height-15, [UIScreen mainScreen].applicationFrame.size.width, HEIGHT_BUTTON_BIG);
+            }
+                i++;
+            
+        }
+        else if(i==1){
+            if (subview==viewFive){
+                subview.frame=CGRectMake(0, previousView.frame.origin.y+previousView.frame.size.height-15, [UIScreen mainScreen].applicationFrame.size.width, HEIGHT_VIEW_LAST);
+            }
+            else {
+                subview.frame=CGRectMake(0, previousView.frame.origin.y+previousView.frame.size.height-15, [UIScreen mainScreen].applicationFrame.size.width, HEIGHT_VIEW);
+            }
             i++;
+
         }
         else {
             if (subview==viewFive){
-                subview.frame=CGRectMake(5, previousView.frame.origin.y+previousView.frame.size.height, [UIScreen mainScreen].applicationFrame.size.width-10, 300);
+                subview.frame=CGRectMake(0, previousView.frame.origin.y+previousView.frame.size.height, [UIScreen mainScreen].applicationFrame.size.width, HEIGHT_VIEW_LAST);
             }
             else {
-                subview.frame=CGRectMake(5, previousView.frame.origin.y+previousView.frame.size.height, [UIScreen mainScreen].applicationFrame.size.width-10, 130);
+                subview.frame=CGRectMake(0, previousView.frame.origin.y+previousView.frame.size.height, [UIScreen mainScreen].applicationFrame.size.width, HEIGHT_VIEW);
             }
 
         }
@@ -258,16 +324,31 @@ BIDViewFive *viewFive;
         }
 
         if(subview==viewOne){
-            subview.frame=CGRectMake(5, previousView.frame.origin.y+previousView.frame.size.height, [UIScreen mainScreen].applicationFrame.size.width-10, 100);
+            subview.frame=CGRectMake(0, previousView.frame.origin.y+previousView.frame.size.height, [UIScreen mainScreen].applicationFrame.size.width, HEIGHT_VIEW_FIRST);
         }
         else if (subview==viewFive){
-            subview.frame=CGRectMake(5, previousView.frame.origin.y+previousView.frame.size.height, [UIScreen mainScreen].applicationFrame.size.width-10, 300);
+            subview.frame=CGRectMake(0, previousView.frame.origin.y+previousView.frame.size.height, [UIScreen mainScreen].applicationFrame.size.width, HEIGHT_VIEW_LAST);
         }
         else {
-            subview.frame=CGRectMake(5, previousView.frame.origin.y+previousView.frame.size.height, [UIScreen mainScreen].applicationFrame.size.width-10, 130);
+            if(previousView.frame.size.height>80){
+                
+            subview.frame=CGRectMake(0, previousView.frame.origin.y+previousView.frame.size.height, [UIScreen mainScreen].applicationFrame.size.width, HEIGHT_VIEW);
+            }else {
+                subview.frame=CGRectMake(0, previousView.frame.origin.y+previousView.frame.size.height-15, [UIScreen mainScreen].applicationFrame.size.width, HEIGHT_VIEW);
+            }
         }
     }
      [UIView commitAnimations];
+}
+-(void)animateView{
+    scrollView.frame=CGRectMake([UIScreen mainScreen].applicationFrame.size.width, 0, 0, [UIScreen mainScreen].applicationFrame.size.height);
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+     scrollView.frame=CGRectMake(0, 0, [UIScreen mainScreen].applicationFrame.size.width, [UIScreen mainScreen].applicationFrame.size.height);
+    [UIView commitAnimations];
+
 }
 - (void)didReceiveMemoryWarning
 {

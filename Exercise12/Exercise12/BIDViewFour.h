@@ -10,6 +10,7 @@
 
 @interface BIDViewFour : UIView
 @property (nonatomic, strong) UIButton *btn;
+@property (nonatomic, strong) UIButton *btn1;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *item;
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B8E946017E074CF009EC9A8 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B8E945F17E074CF009EC9A8 /* info.png */; };
 		4BDD0ADE17DED03D0096A70B /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD0ADC17DED03D0096A70B /* more.png */; };
 		4BDD0ADF17DED03D0096A70B /* threedot.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD0ADD17DED03D0096A70B /* threedot.png */; };
 		4BDD0AE317DED8630096A70B /* city1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD0AE017DED8630096A70B /* city1.jpg */; };
@@ -15,6 +16,8 @@
 		4BDD0AE917DF23740096A70B /* likephoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD0AE617DF23740096A70B /* likephoto.png */; };
 		4BDD0AEA17DF23740096A70B /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD0AE717DF23740096A70B /* location.png */; };
 		4BDD0AEB17DF23740096A70B /* new_homepage.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD0AE817DF23740096A70B /* new_homepage.png */; };
+		4BDD3E1C17E15AF6008433E4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BDD3E1B17E15AF6008433E4 /* QuartzCore.framework */; };
+		4BDD3E1E17E17162008433E4 /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD3E1D17E17162008433E4 /* 12.png */; };
 		50F8079D17DE5CF400C3CDCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F8079C17DE5CF400C3CDCF /* UIKit.framework */; };
 		50F8079F17DE5CF400C3CDCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F8079E17DE5CF400C3CDCF /* Foundation.framework */; };
 		50F807A117DE5CF400C3CDCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F807A017DE5CF400C3CDCF /* CoreGraphics.framework */; };
@@ -50,6 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B8E945F17E074CF009EC9A8 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = SOURCE_ROOT; };
 		4BDD0ADC17DED03D0096A70B /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = SOURCE_ROOT; };
 		4BDD0ADD17DED03D0096A70B /* threedot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = threedot.png; sourceTree = SOURCE_ROOT; };
 		4BDD0AE017DED8630096A70B /* city1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = city1.jpg; sourceTree = SOURCE_ROOT; };
@@ -58,6 +62,8 @@
 		4BDD0AE617DF23740096A70B /* likephoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = likephoto.png; sourceTree = SOURCE_ROOT; };
 		4BDD0AE717DF23740096A70B /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = SOURCE_ROOT; };
 		4BDD0AE817DF23740096A70B /* new_homepage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_homepage.png; sourceTree = SOURCE_ROOT; };
+		4BDD3E1B17E15AF6008433E4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4BDD3E1D17E17162008433E4 /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = SOURCE_ROOT; };
 		50F8079917DE5CF400C3CDCF /* Exercise12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise12.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F8079C17DE5CF400C3CDCF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		50F8079E17DE5CF400C3CDCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -109,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BDD3E1C17E15AF6008433E4 /* QuartzCore.framework in Frameworks */,
 				50F8079D17DE5CF400C3CDCF /* UIKit.framework in Frameworks */,
 				50F8079F17DE5CF400C3CDCF /* Foundation.framework in Frameworks */,
 				50F807A117DE5CF400C3CDCF /* CoreGraphics.framework in Frameworks */,
@@ -118,54 +125,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		50F8079017DE5CF400C3CDCF = {
+		4BDD3E1917E157B5008433E4 /* Custom View */ = {
 			isa = PBXGroup;
 			children = (
-				50F807A217DE5CF400C3CDCF /* Exercise12 */,
-				50F8079B17DE5CF400C3CDCF /* Frameworks */,
-				50F8079A17DE5CF400C3CDCF /* Products */,
+				50F807D817DE5E9200C3CDCF /* BIDViewOne.h */,
+				50F807D917DE5E9200C3CDCF /* BIDViewOne.m */,
+				50F807DB17DE5EA400C3CDCF /* BIDViewTwo.h */,
+				50F807DC17DE5EA400C3CDCF /* BIDViewTwo.m */,
+				50F807DE17DE5EB700C3CDCF /* BIDViewThree.h */,
+				50F807DF17DE5EB700C3CDCF /* BIDViewThree.m */,
+				50F807E117DE5EC700C3CDCF /* BIDViewFour.h */,
+				50F807E217DE5EC700C3CDCF /* BIDViewFour.m */,
+				50F807EA17DE639000C3CDCF /* BIDAddCell.h */,
+				50F807EB17DE639000C3CDCF /* BIDAddCell.m */,
+				50F807E417DE5ED900C3CDCF /* BIDViewFive.h */,
+				50F807E517DE5ED900C3CDCF /* BIDViewFive.m */,
 			);
+			name = "Custom View";
 			sourceTree = "<group>";
 		};
-		50F8079A17DE5CF400C3CDCF /* Products */ = {
+		4BDD3E1A17E1581E008433E4 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				50F8079917DE5CF400C3CDCF /* Exercise12.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		50F8079B17DE5CF400C3CDCF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				50F8079C17DE5CF400C3CDCF /* UIKit.framework */,
-				50F8079E17DE5CF400C3CDCF /* Foundation.framework */,
-				50F807A017DE5CF400C3CDCF /* CoreGraphics.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		50F807A217DE5CF400C3CDCF /* Exercise12 */ = {
-			isa = PBXGroup;
-			children = (
-				50F807D717DE5E1800C3CDCF /* View 1 */,
-				50F807D617DE5E1500C3CDCF /* View 2 */,
-				50F807D517DE5E1200C3CDCF /* View 3 */,
-				50F807D417DE5E0E00C3CDCF /* View 4 */,
-				50F807D317DE5E0B00C3CDCF /* View 5 */,
-				50F807AB17DE5CF400C3CDCF /* BIDAppDelegate.h */,
-				50F807AC17DE5CF400C3CDCF /* BIDAppDelegate.m */,
-				50F807B417DE5CF400C3CDCF /* BIDViewController.h */,
-				50F807B517DE5CF400C3CDCF /* BIDViewController.m */,
-				50F807B717DE5CF400C3CDCF /* BIDViewController.xib */,
-				50F807A317DE5CF400C3CDCF /* Supporting Files */,
-			);
-			path = Exercise12;
-			sourceTree = "<group>";
-		};
-		50F807A317DE5CF400C3CDCF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
+				4BDD3E1D17E17162008433E4 /* 12.png */,
+				4B8E945F17E074CF009EC9A8 /* info.png */,
 				4BDD0AE617DF23740096A70B /* likephoto.png */,
 				4BDD0AE717DF23740096A70B /* location.png */,
 				4BDD0AE817DF23740096A70B /* new_homepage.png */,
@@ -188,6 +171,56 @@
 				50F807C617DE5DF800C3CDCF /* img.jpg */,
 				50F807C717DE5DF800C3CDCF /* menu.png */,
 				50F807C817DE5DF800C3CDCF /* setting.png */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		50F8079017DE5CF400C3CDCF = {
+			isa = PBXGroup;
+			children = (
+				50F807A217DE5CF400C3CDCF /* Exercise12 */,
+				50F8079B17DE5CF400C3CDCF /* Frameworks */,
+				50F8079A17DE5CF400C3CDCF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		50F8079A17DE5CF400C3CDCF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50F8079917DE5CF400C3CDCF /* Exercise12.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50F8079B17DE5CF400C3CDCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4BDD3E1B17E15AF6008433E4 /* QuartzCore.framework */,
+				50F8079C17DE5CF400C3CDCF /* UIKit.framework */,
+				50F8079E17DE5CF400C3CDCF /* Foundation.framework */,
+				50F807A017DE5CF400C3CDCF /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50F807A217DE5CF400C3CDCF /* Exercise12 */ = {
+			isa = PBXGroup;
+			children = (
+				4BDD3E1917E157B5008433E4 /* Custom View */,
+				50F807D417DE5E0E00C3CDCF /* View Controller */,
+				50F807D317DE5E0B00C3CDCF /* System */,
+				50F807AB17DE5CF400C3CDCF /* BIDAppDelegate.h */,
+				50F807AC17DE5CF400C3CDCF /* BIDAppDelegate.m */,
+				50F807B717DE5CF400C3CDCF /* BIDViewController.xib */,
+				50F807A317DE5CF400C3CDCF /* Supporting Files */,
+			);
+			path = Exercise12;
+			sourceTree = "<group>";
+		};
+		50F807A317DE5CF400C3CDCF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4BDD3E1A17E1581E008433E4 /* Image */,
 				50F807A417DE5CF400C3CDCF /* Exercise12-Info.plist */,
 				50F807A517DE5CF400C3CDCF /* InfoPlist.strings */,
 				50F807A817DE5CF400C3CDCF /* main.m */,
@@ -199,53 +232,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		50F807D317DE5E0B00C3CDCF /* View 5 */ = {
+		50F807D317DE5E0B00C3CDCF /* System */ = {
 			isa = PBXGroup;
 			children = (
-				50F807E417DE5ED900C3CDCF /* BIDViewFive.h */,
-				50F807E517DE5ED900C3CDCF /* BIDViewFive.m */,
 			);
-			name = "View 5";
+			name = System;
 			sourceTree = "<group>";
 		};
-		50F807D417DE5E0E00C3CDCF /* View 4 */ = {
+		50F807D417DE5E0E00C3CDCF /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				50F807E117DE5EC700C3CDCF /* BIDViewFour.h */,
-				50F807E217DE5EC700C3CDCF /* BIDViewFour.m */,
 				50F807E717DE637A00C3CDCF /* BIDAddTableViewController.h */,
+				50F807B417DE5CF400C3CDCF /* BIDViewController.h */,
+				50F807B517DE5CF400C3CDCF /* BIDViewController.m */,
 				50F807E817DE637A00C3CDCF /* BIDAddTableViewController.m */,
-				50F807EA17DE639000C3CDCF /* BIDAddCell.h */,
-				50F807EB17DE639000C3CDCF /* BIDAddCell.m */,
 			);
-			name = "View 4";
-			sourceTree = "<group>";
-		};
-		50F807D517DE5E1200C3CDCF /* View 3 */ = {
-			isa = PBXGroup;
-			children = (
-				50F807DE17DE5EB700C3CDCF /* BIDViewThree.h */,
-				50F807DF17DE5EB700C3CDCF /* BIDViewThree.m */,
-			);
-			name = "View 3";
-			sourceTree = "<group>";
-		};
-		50F807D617DE5E1500C3CDCF /* View 2 */ = {
-			isa = PBXGroup;
-			children = (
-				50F807DB17DE5EA400C3CDCF /* BIDViewTwo.h */,
-				50F807DC17DE5EA400C3CDCF /* BIDViewTwo.m */,
-			);
-			name = "View 2";
-			sourceTree = "<group>";
-		};
-		50F807D717DE5E1800C3CDCF /* View 1 */ = {
-			isa = PBXGroup;
-			children = (
-				50F807D817DE5E9200C3CDCF /* BIDViewOne.h */,
-				50F807D917DE5E9200C3CDCF /* BIDViewOne.m */,
-			);
-			name = "View 1";
+			name = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +329,8 @@
 				4BDD0AE917DF23740096A70B /* likephoto.png in Resources */,
 				4BDD0AEA17DF23740096A70B /* location.png in Resources */,
 				4BDD0AEB17DF23740096A70B /* new_homepage.png in Resources */,
+				4B8E946017E074CF009EC9A8 /* info.png in Resources */,
+				4BDD3E1E17E17162008433E4 /* 12.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

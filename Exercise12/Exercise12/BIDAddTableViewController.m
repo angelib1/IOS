@@ -22,6 +22,7 @@ BIDAddCell *cell;
     if (self) {
         // Custom initialization
         cell=[[BIDAddCell alloc]init];
+        
     }
     return self;
 }
@@ -70,11 +71,12 @@ BIDAddCell *cell;
         cell.lblLabel3.textColor=[UIColor grayColor];
         cell.lblLabel3.font=font;
     }
+    
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 25;
+    return 26;
 }
 #pragma mark - Table view delegate
 

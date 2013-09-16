@@ -20,7 +20,13 @@
 -(void)settingClick;
 -(void)view1_Click;
 -(void)view2_Click;
+-(void)view2_InfoClick;
+-(void)view2_btn2Click;
+-(void)view2_btn3Click;
 -(void)view3_Click;
+-(void)view3_btn2Click;
 -(void)view4_Click;
+-(void)view4_btn1Click;
 -(void)view5_Click;
+-(void)animateView;
 @end

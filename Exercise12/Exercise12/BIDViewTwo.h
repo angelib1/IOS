@@ -10,10 +10,14 @@
 
 @interface BIDViewTwo : UIView
 @property (nonatomic, strong) UIButton *btn1;
+@property (nonatomic, strong) UIButton *btn;
 @property (nonatomic, strong) UIImageView *Image1;
 @property (nonatomic, strong) UILabel *lbl1;
 @property (nonatomic, strong) UILabel *lbl2;
 @property (nonatomic, strong) UILabel *lbl3;
+@property (nonatomic, strong) UILabel *lbl4;
+@property (nonatomic, strong) UILabel *lbl5;
 @property (nonatomic, strong) UIButton *btn2;
+@property (nonatomic, strong) UIButton *btn3;
 
 @end
